@@ -1,0 +1,20 @@
+{
+  "profile_name": "v1_fast_draft",
+  "version": "1.0.0",
+  "created_at": "2026-10-15",
+  "description": "初始快速草稿版：適合快速端到端打通流程與鏡頭時間戳驗證，速度優先（約 1.1s/step）。",
+  "settings": {
+    "steps": 20,
+    "cfg": 3.0,
+    "sampler_name": "euler",
+    "scheduler": "simple",
+    "strength": 1.0,
+    "size": [768, 512],
+    "fps": 24,
+    "stg_enabled": false,
+    "stg_blocks": "29",
+    "stg_scale": 1.0,
+    "upscale_method": "lanczos_1080p",
+    "motion_style": "active_dynamic"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "0": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo_local\\out\\voice\\bv\\line0.wav",
+    "text": "請問微積分是在綜合大樓嗎？",
+    "voice": "zh-TW-YunJheNeural"
+  },
+  "1": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo_local\\out\\voice\\bv\\line1.wav",
+    "text": "這裡是文學院，理工館在對面山上喔。",
+    "voice": "zh-TW-HsiaoChenNeural"
+  },
+  "2": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo_local\\out\\voice\\bv\\line2.wav",
+    "text": "走吧，學姊順路載你一程。",
+    "voice": "zh-TW-HsiaoChenNeural"
+  }
+}

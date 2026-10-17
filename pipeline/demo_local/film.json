@@ -1,0 +1,92 @@
+{
+  "title": "大學新生的第一堂課：迷航記 (Freshman's First Day: Lost on Campus)",
+  "output_name": "freshman_campus_h3_1080p.mp4",
+  "engine": "h3",
+  "music_file": "campus_Instrumental.wav",
+  "profile": "fasth3_turbo_8step",
+  "base_seed": 20261060,
+  "sampling": {
+    "steps": 8,
+    "cfg": 4.0,
+    "sampler_name": "euler",
+    "scheduler": "simple",
+    "size": [960, 544],
+    "fps": 24,
+    "max_frames": 124,
+    "qc_min_motion": 3.5,
+    "qc_max_drift": 35.0
+  },
+  "chars": {
+    "kai": {
+      "name": "阿凱",
+      "look": "Kai, an 18-year-old Taiwanese male college freshman with neat short naturally parted black hair, bright lively round face, expressive brown eyes, wearing a clean olive-green oversized college casual hoodie over a white t-shirt and dark trousers, carrying a black backpack strap across one shoulder",
+      "voice_design": "A lively, energetic 18-year-old Taiwanese college freshman, curious, expressive and polite, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-YunJheNeural"
+    },
+    "ching": {
+      "name": "晴晴",
+      "look": "Ching, a sharp and gentle 19-year-old Taiwanese female college sophomore senior, with shoulder-length straight black hair with soft layered ends, thin oval wire-rimmed glasses, cheerful bright eyes, wearing a light-cream knitted cardigan over a light-blue collared blouse and navy pleated skirt, holding textbooks in her arm",
+      "voice_design": "A bright, clear, intelligent and warm 19-year-old Taiwanese female college student, friendly and slightly teasing, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-HsiaoChenNeural"
+    }
+  },
+  "h3": {
+    "style": "A realistic cinematic live-action Taiwanese youth college movie shot on 35mm film, warm early-autumn golden sunlight pouring across red-brick university buildings and paved campus walkways, shallow depth of field, sharp facial features, natural micro-expressions.",
+    "setting": "A sunlit Taiwanese university red-brick campus building corridor, arched entrance, and tree-lined outdoor walkway with bicycles",
+    "constraints": [
+      "Camera locked on a sturdy tripod; zero camera shake.",
+      "Preserve facial identity, hairstyle, and glasses sharply from the first frame throughout the shot.",
+      "Natural subtle bodily acting without unnatural warping or limb stretching."
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "refs": ["kai"],
+      "dur": 4.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "kai",
+        "text": "請問微積分是在綜合大樓嗎？",
+        "at": 0.25
+      },
+      "action": "Kai stands at the university building arched entrance holding his paper campus map steadily in front of his chest. He speaks his polite question clearly with natural lip movement and an eager, puzzled expression, then tilts his head slightly with an attentive smile waiting for directions."
+    },
+    {
+      "id": "S2",
+      "refs": ["ching"],
+      "dur": 3.5,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "ching",
+        "text": "這裡是文學院，理工館在對面山上喔。",
+        "at": 0.25
+      },
+      "action": "Ching stands in the sunlit university hallway holding her textbooks steadily against her chest. She turns her head toward Kai with a warm teasing smile, speaking her line clearly with playful lip movement and an amused grin."
+    },
+    {
+      "id": "S3",
+      "refs": ["kai"],
+      "dur": 3.5,
+      "img_strength": 0.93,
+      "end_anchor_strength": 0.15,
+      "line": null,
+      "action": "Close-up of Kai holding his map below frame. Subtle comical frozen shock purely through facial expressions: his eyes widen in hilarious disbelief at the distance, blinking once slowly in comic defeat with lips closed, keeping his neat black hair and facial features perfectly sharp."
+    },
+    {
+      "id": "S4",
+      "refs": ["ching", "kai"],
+      "dur": 4.5,
+      "img_strength": 0.93,
+      "end_anchor_strength": 0.15,
+      "line": {
+        "who": "ching",
+        "text": "走吧，學姊順路載你一程。",
+        "at": 0.25
+      },
+      "action": "On the tree-lined campus pathway, Ching stands beside her commuter bicycle, smiling warmly as she speaks her reassuring line with gentle natural lip movements and a friendly nod. Kai looks up at her with an overjoyed, relieved smile and nods gratefully. Both keep natural steady postures."
+    }
+  ]
+}

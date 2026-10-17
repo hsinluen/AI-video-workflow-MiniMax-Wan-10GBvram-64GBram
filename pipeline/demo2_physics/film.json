@@ -1,0 +1,104 @@
+{
+  "title": "普通物理課的角動量守恆驚魂記 (General Physics: Conservation of Angular Momentum Adventure)",
+  "output_name": "physics_angular_momentum_h3_1080p.mp4",
+  "engine": "h3",
+  "music_file": "campus_Instrumental.wav",
+  "profile": "fasth3_turbo_8step",
+  "base_seed": 20261080,
+  "sampling": {
+    "steps": 8,
+    "cfg": 4.0,
+    "sampler_name": "euler",
+    "scheduler": "simple",
+    "size": [
+      960,
+      544
+    ],
+    "fps": 24,
+    "max_frames": 124,
+    "qc_min_motion": 3.5,
+    "qc_max_drift": 35.0
+  },
+  "chars": {
+    "chang": {
+      "name": "張教授",
+      "look": "Prof. Chang, a 52-year-old Taiwanese physics professor with neat salt-and-pepper short parted black-and-grey hair, thin silver wire-rimmed rectangular glasses, warm crow's feet around friendly intelligent eyes, wearing a light-grey casual blazer over a clean white collared shirt and dark trousers",
+      "voice_design": "A wise, energetic and enthusiastic 52-year-old Taiwanese male physics professor, engaging and humorous, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-YunJheNeural"
+    },
+    "yu": {
+      "name": "阿宇",
+      "look": "Yu, an 18-year-old Taiwanese male university physics freshman with short black textured hair, expressive lively brown eyes, energetic youthful round face, wearing a dark-navy collegiate hoodie over a white crewneck shirt, sitting at a wooden university lecture desk",
+      "voice_design": "A lively, expressive 18-year-old Taiwanese college freshman, nervous and humorous, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-YunJheNeural"
+    }
+  },
+  "h3": {
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white physics equations, sharp facial features, natural micro-expressions.",
+    "setting": "A spacious tiered university physics amphitheater lecture hall with green chalkboard, wooden desks, demonstration apparatus, and student seats",
+    "constraints": [
+      "Camera locked on a sturdy tripod; zero camera shake.",
+      "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
+      "Natural bodily physics and acting without unnatural warping."
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "refs": [
+        "chang"
+      ],
+      "dur": 4.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "chang",
+        "text": "各位同學，當我坐在旋轉椅上翻轉這個車輪，角動量守恆會發生什麼事？",
+        "at": 0.25
+      },
+      "action": "Prof. Chang stands firmly at the front lecture platform, holding the spinning bicycle wheel demonstration prop steadily in front of his chest. He speaks with an enthusiastic smile and clear natural lip movements, then looks attentively out toward the students waiting for an answer."
+    },
+    {
+      "id": "S2",
+      "refs": [
+        "yu"
+      ],
+      "dur": 3.5,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "yu",
+        "text": "老師不要點我……我只知道期中考我會頭很暈……",
+        "at": 0.25
+      },
+      "action": "Yu sits in the front row of the tiered amphitheater desks, clutching his General Physics textbook tightly against his chest with both hands. He glances nervously sideways, speaking his anxious line with comical guilty lip movement and a pleading, timid smile trying to hide from the professor's gaze."
+    },
+    {
+      "id": "S3",
+      "refs": [
+        "chang"
+      ],
+      "dur": 3.5,
+      "img_strength": 0.93,
+      "end_anchor_strength": 0.15,
+      "line": null,
+      "action": "Prof. Chang sits on the chrome swivel demonstration stool and tilts the spinning wheel sideways. The stool immediately begins rotating, carrying the professor in a smooth 360-degree spin! He grips the wheel firmly with wide comical excited eyes and open mouth in hilarious delight, keeping his glasses and face sharp."
+    },
+    {
+      "id": "S4",
+      "refs": [
+        "chang",
+        "yu"
+      ],
+      "dur": 4.5,
+      "img_strength": 0.93,
+      "end_anchor_strength": 0.15,
+      "line": {
+        "who": "chang",
+        "text": "看到了嗎？這就是物理學的魔力！大家精神都來了吧！",
+        "at": 0.25
+      },
+      "action": "On the lecture platform, Prof. Chang safely brings the swivel stool to a stop, smiling warmly as he pushes up his glasses and speaks his triumphant line. In the foreground, Yu puts his textbook on the desk, laughing out loud and clapping his hands enthusiastically. Warm classroom atmosphere."
+    }
+  ]
+}

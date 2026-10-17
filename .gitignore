@@ -1,0 +1,63 @@
+# 媒體與模型大檔
+*.mp4
+*.mov
+*.safetensors
+*.sft
+*.gguf
+*.ckpt
+*.bin
+*.pt
+*.pth
+
+# 敏感金鑰
+.env
+*.key
+*key*.txt
+
+# Python 快取
+__pycache__/
+*.pyc
+*.pyo
+
+# 執行產物與暫存檔
+setup/smoke_out/
+pipeline/*/out/h3/
+pipeline/*/out/cut/
+pipeline/*/out/vsr/
+pipeline/*/out/review/
+pipeline/*/out_bak/
+*.png.bak
+*.tmp
+test_lock.bin
+
+# 允許 demo_local 內定大學生示範素材納入倉庫
+!pipeline/demo_local/out/
+!pipeline/demo_local/out/chars/
+!pipeline/demo_local/out/chars/*.png
+!pipeline/demo_local/out/first/
+!pipeline/demo_local/out/first/*.png
+!pipeline/demo_local/out/voice_picks.json
+!pipeline/demo_local/out/voice/
+!pipeline/demo_local/out/voice/bv/
+!pipeline/demo_local/out/voice/bv/line*.wav
+!pipeline/demo_local/out/voice/bv/line*.mp3
+!pipeline/demo_local/out/music/
+!pipeline/demo_local/out/music/campus_Instrumental.wav
+
+# 允許 demo2_physics 示範素材納入倉庫
+!pipeline/demo2_physics/out/
+!pipeline/demo2_physics/out/chars/
+!pipeline/demo2_physics/out/chars/*.png
+!pipeline/demo2_physics/out/first/
+!pipeline/demo2_physics/out/first/*.png
+!pipeline/demo2_physics/out/voice_picks.json
+!pipeline/demo2_physics/out/voice/
+!pipeline/demo2_physics/out/voice/bv/
+!pipeline/demo2_physics/out/voice/bv/line*.wav
+!pipeline/demo2_physics/out/voice/bv/line*.mp3
+!pipeline/demo2_physics/out/music/
+!pipeline/demo2_physics/out/music/campus_Instrumental.wav
+
+# 測試用生成目錄排除
+pipeline/20261016-*/out/
+pipeline/missing_bento/out/
