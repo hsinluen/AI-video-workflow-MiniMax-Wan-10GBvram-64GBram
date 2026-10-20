@@ -1,0 +1,20 @@
+{
+  "0": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo3_fire\\out\\voice\\bv\\line0.wav",
+    "text": "各位同學，當熱氣層達到六百度，閃燃臨界點會發生什麼事？",
+    "voice": "Tsai-Cloned",
+    "duration": 7.52
+  },
+  "1": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo3_fire\\out\\voice\\bv\\line1.wav",
+    "text": "報告老師！這就像外送披薩，再不下課起司就要炭化閃燃了！",
+    "voice": "zh-TW-YunJheNeural",
+    "duration": 6.48
+  },
+  "2": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo3_fire\\out\\voice\\bv\\line2.wav",
+    "text": "敏銳度超越消防設備師！準時下課搶披薩！",
+    "voice": "Tsai-Cloned",
+    "duration": 5.28
+  }
+}

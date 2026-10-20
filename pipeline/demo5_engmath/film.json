@@ -1,0 +1,109 @@
+{
+  "title": "工程數學：傅立葉轉換與隔壁修路噪音的浪漫和解 (Engineering Mathematics: Fourier Transform & The Jackhammer Serenade) 旗艦版",
+  "output_name": "engmath_fourier_h3_1080p.mp4",
+  "engine": "h3",
+  "music_file": "campus_Instrumental.wav",
+  "profile": "fasth3_turbo_16step_pro_v2",
+  "base_seed": 20261110,
+  "sampling": {
+    "steps": 16,
+    "cfg": 4.0,
+    "sampler_name": "res_multistep",
+    "scheduler": "simple",
+    "size": [
+      1152,
+      640
+    ],
+    "crf": 12,
+    "fps": 24,
+    "max_frames": 220,
+    "qc_min_motion": 3.5,
+    "qc_max_drift": 35.0
+  },
+  "chars": {
+    "tsai": {
+      "name": "蔡教授",
+      "look": "Prof. Tsai, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a stylish crisp black business casual collared shirt",
+      "voice_design": "Prof. Tsai cloned voice, wise, energetic and enthusiastic 52-year-old Taiwanese male engineering mathematics professor, engaging and humorous, natural Taiwanese Mandarin accent.",
+      "edge_voice": "Tsai-Cloned"
+    },
+    "yu": {
+      "name": "阿宇",
+      "look": "Yu, a 20-year-old Taiwanese male university engineering student with short black textured hair, dark-rimmed rectangular eyeglasses, wearing large black over-ear noise-cancelling headphones resting casually around his neck, dressed in a clean navy-and-grey plaid button-up shirt over a white tee",
+      "voice_design": "A lively, expressive 20-year-old Taiwanese college engineering student, relatable, humorous and tired, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-YunJheNeural"
+    }
+  },
+  "h3": {
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white Fourier Transform equations, sharp facial features, high shutter speed cinematography, crisp edges throughout, zero motion blur, high temporal coherence.",
+    "setting": "A spacious tiered university engineering amphitheater with deep green chalkboard, wooden desks, audio spectrum demonstration laptop, and student seats",
+    "constraints": [
+      "LOCKED-OFF STATIC CAMERA on a sturdy tripod; no zoom, no pan.",
+      "High shutter speed, sharp focus throughout, zero motion blur, high temporal coherence.",
+      "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
+      "Natural bodily physics and acting without unnatural warping or ghosting."
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "無論時域信號多混亂，只要傅立葉轉換，本質就是和諧的正弦波！",
+        "at": 0.20,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Prof. Tsai stands firmly at the front lecture platform, holding a piece of chalk and gesturing toward the Fourier transform equations on the board. At 0.20 seconds, he speaks his inspiring statement with an enthusiastic smile and natural clear lip movements. Right after finishing his sentence, his lips close naturally into a confident smile and stay closed, looking out at the students. High shutter speed, crisp edges, zero motion blur."
+    },
+    {
+      "id": "S2",
+      "refs": [
+        "yu"
+      ],
+      "dur": 7.3,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "yu",
+        "text": "老師！那窗外挖馬路的電鑽聲也能變和弦嗎？我耳膜快被震碎了！",
+        "at": 0.20,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "In the wooden tiered desks, Yu holds up his headphones with one hand and gestures comically toward the open window. At 0.20 seconds, he speaks his agonized line with lively comical lip movements and a pleading expression. Right after finishing his line, his lips close naturally into a pained humorous grimace and stay closed. High shutter speed, zero motion blur."
+    },
+    {
+      "id": "S3",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 4.4,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": null,
+      "action": "On the lecture platform, Prof. Tsai stands beside the audio analyzer laptop, smoothly sliding down the low-pass filter slider to smooth the noisy wave into a pure sine wave. Throughout the entire shot, he keeps his mouth completely closed in a broad, cool maestro grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
+    },
+    {
+      "id": "S4",
+      "refs": [
+        "tsai",
+        "yu"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "用演算法把電鑽變成催眠曲，今晚作業就把工地噪音設計成濾波器！",
+        "at": 0.20,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "On the lecture platform, Prof. Tsai laughs heartily while waving toward the window as if conducting music. At 0.20 seconds, he speaks his punchline with clear lip synchronization. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Yu puts on his headphones, smiling brightly and giving two enthusiastic thumbs-up. High shutter speed, clear classroom atmosphere, zero ghosting."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "0": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo5_engmath\\out\\voice\\bv\\line0.wav",
+    "text": "無論時域信號多混亂，只要傅立葉轉換，本質就是和諧的正弦波！",
+    "voice": "Tsai-Cloned",
+    "duration": 6.86
+  },
+  "1": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo5_engmath\\out\\voice\\bv\\line1.wav",
+    "text": "老師！那窗外挖馬路的電鑽聲也能變和弦嗎？我耳膜快被震碎了！",
+    "voice": "zh-TW-YunJheNeural",
+    "duration": 6.42
+  },
+  "2": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo5_engmath\\out\\voice\\bv\\line2.wav",
+    "text": "用演算法把電鑽變成催眠曲，今晚作業就把工地噪音設計成濾波器！",
+    "voice": "Tsai-Cloned",
+    "duration": 6.79
+  }
+}

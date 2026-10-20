@@ -1,0 +1,29 @@
+{
+  "profile_name": "v4_r3_balanced_motion",
+  "version": "4.0.0",
+  "created_at": "2026-10-16",
+  "description": "R3 動態與畫質平衡版：保留 R2 的官方 LTXVScheduler/ModelSamplingLTXV 架構（防臉部融化），但移除『同一張首幀當尾幀』的死鎖錨定 (end_anchor_strength=0)、放寬首幀強度 (0.88)、恢復官方 cfg=3.0、STG 只作用前 70% 步數，並改回 24fps 真實時間播放（不再拉伸慢放），讓人物有自然動作。",
+  "settings": {
+    "steps": 35,
+    "cfg": 3.0,
+    "sampler_name": "euler",
+    "scheduler": "ltxv",
+    "max_shift": 2.05,
+    "base_shift": 0.95,
+    "terminal": 0.1,
+    "img_compression": 30,
+    "img_strength": 0.88,
+    "end_anchor_strength": 0.0,
+    "length": "auto (duration x 24fps, snapped to 8n+1, max 97)",
+    "playback": "realtime_24fps (no frame stretching)",
+    "size": [768, 512],
+    "fps": 24,
+    "stg_enabled": true,
+    "stg_blocks": "14",
+    "stg_scale": 1.0,
+    "stg_start_percent": 0.0,
+    "stg_end_percent": 0.70,
+    "upscale_method": "lanczos_1080p",
+    "motion_style": "natural_cinematic_acting"
+  }
+}

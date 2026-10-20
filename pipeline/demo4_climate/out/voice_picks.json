@@ -1,0 +1,20 @@
+{
+  "0": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo4_climate\\out\\voice\\bv\\line0.wav",
+    "text": "各位同學，北半球科氏力讓氣流右偏，那它能決定洗臉台的水流方向嗎？",
+    "voice": "Tsai-Cloned",
+    "duration": 6.88
+  },
+  "1": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo4_climate\\out\\voice\\bv\\line1.wav",
+    "text": "老師！女宿水槽明明都是順時針排掉，難道我們寢室偷渡到南半球了嗎？",
+    "voice": "zh-TW-HsiaoChenNeural",
+    "duration": 6.53
+  },
+  "2": {
+    "file": "C:\\2026-Antigravity_AI-Video_maker\\pipeline\\demo4_climate\\out\\voice\\bv\\line2.wav",
+    "text": "除非妳的洗臉台有兩百公里大，否則只是拔塞子的角度！下課洗臉吧！",
+    "voice": "Tsai-Cloned",
+    "duration": 6.96
+  }
+}

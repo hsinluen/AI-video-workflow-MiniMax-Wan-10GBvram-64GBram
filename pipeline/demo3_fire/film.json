@@ -1,0 +1,109 @@
+{
+  "title": "火災學：閃燃臨界點與披薩便當的生死時速 (Fire Dynamics: Flashover Threshold & The Pizza Race) 旗艦版",
+  "output_name": "fire_flashover_h3_1080p.mp4",
+  "engine": "h3",
+  "music_file": "campus_Instrumental.wav",
+  "profile": "fasth3_turbo_16step_pro_v2",
+  "base_seed": 20261090,
+  "sampling": {
+    "steps": 16,
+    "cfg": 4.0,
+    "sampler_name": "res_multistep",
+    "scheduler": "simple",
+    "size": [
+      1152,
+      640
+    ],
+    "crf": 12,
+    "fps": 24,
+    "max_frames": 220,
+    "qc_min_motion": 3.5,
+    "qc_max_drift": 35.0
+  },
+  "chars": {
+    "tsai": {
+      "name": "蔡教授",
+      "look": "Prof. Tsai, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a dark navy-blue casual blazer over a clean light-blue collared shirt",
+      "voice_design": "Prof. Tsai cloned voice, wise, energetic and enthusiastic 52-year-old Taiwanese male engineering professor, engaging and humorous, natural Taiwanese Mandarin accent.",
+      "edge_voice": "Tsai-Cloned"
+    },
+    "hong": {
+      "name": "阿宏",
+      "look": "Hong, a 19-year-old Taiwanese male university engineering student with short neat black textured hair, friendly youthful round face, expressive brown eyes, wearing a clean white short-sleeve polo shirt with subtle navy stripes on the collar",
+      "voice_design": "A lively, expressive 19-year-old Taiwanese college freshman student, nervous and humorous, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-YunJheNeural"
+    }
+  },
+  "h3": {
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white fire dynamics equations, sharp facial features, high shutter speed cinematography, crisp edges throughout, zero motion blur, high temporal coherence.",
+    "setting": "A spacious tiered university lecture amphitheater with deep green chalkboard, wooden desks, thermal demonstration apparatus, and student seats",
+    "constraints": [
+      "LOCKED-OFF STATIC CAMERA on a sturdy tripod; no zoom, no pan.",
+      "High shutter speed, sharp focus throughout, zero motion blur, high temporal coherence.",
+      "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
+      "Natural bodily physics and acting without unnatural warping or ghosting."
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 7.5,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "各位同學，當熱氣層達到六百度，閃燃臨界點會發生什麼事？",
+        "at": 0.25,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Prof. Tsai stands firmly at the front lecture platform, holding the red laser pointer steadily in his right hand pointing toward the fire dynamics curve on the chalkboard. At 0.25 seconds, he speaks his question with an enthusiastic smile and natural lip movements. Right after the question finishes, his lips close naturally and stay closed, and he looks attentively out toward the students with a warm smile waiting for an answer. High shutter speed, crisp edges, zero motion blur."
+    },
+    {
+      "id": "S2",
+      "refs": [
+        "hong"
+      ],
+      "dur": 7.2,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "hong",
+        "text": "報告老師！這就像外送披薩，再不下課起司就要炭化閃燃了！",
+        "at": 0.25,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Hong sits in the front row of the tiered amphitheater desks, clutching his Fire Dynamics textbook tightly against his chest with both hands. At 0.25 seconds, he speaks his anxious line with comical guilty lip movement and a pleading, timid smile glancing nervously down at his wristwatch. Right after finishing his line, his lips close naturally and stay closed, breathing a small quiet sigh of relief. High shutter speed, zero motion blur."
+    },
+    {
+      "id": "S3",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 4.2,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": null,
+      "action": "Prof. Tsai stands steadily on the lecture platform in front of the chalkboard, holding the professional handheld infrared thermal imaging camera in both hands and aiming it at the steaming coffee mug on the lectern. The small screen shows false-color heat contours. Throughout the entire shot, he keeps his mouth completely closed in a broad, confident closed-mouth grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
+    },
+    {
+      "id": "S4",
+      "refs": [
+        "tsai",
+        "hong"
+      ],
+      "dur": 7.2,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "敏銳度超越消防設備師！準時下課搶披薩！",
+        "at": 0.25,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "On the lecture platform, Prof. Tsai safely sets down the thermal camera on the lectern. At 0.25 seconds, he speaks his triumphant humorous line with clear lip synchronization while smiling warmly and gesturing toward the classroom door. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Hong puts down his textbook, laughing out loud with a wide open joyful laugh and clapping his hands enthusiastically. High shutter speed, clear classroom atmosphere, zero ghosting."
+    }
+  ]
+}

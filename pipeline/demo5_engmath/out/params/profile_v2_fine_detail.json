@@ -1,0 +1,22 @@
+{
+  "profile_name": "v2_fine_detail",
+  "version": "2.0.0",
+  "created_at": "2026-10-16",
+  "description": "慢工出細活旗艦版：專注消除殘影、臉部變形與手部畸變。提高採樣步數至 35 步，啟用 ComfyUI 原生 LTXVSpatioTemporalGuidance (STG) 抑制時間層噪聲，降低 CFG 至 2.6 避免過飽和，配合電影級微動作提示詞。",
+  "settings": {
+    "steps": 35,
+    "cfg": 2.6,
+    "sampler_name": "euler",
+    "scheduler": "simple",
+    "strength": 1.0,
+    "size": [768, 512],
+    "fps": 24,
+    "stg_enabled": true,
+    "stg_blocks": "29",
+    "stg_scale": 1.0,
+    "start_percent": 0.0,
+    "end_percent": 1.0,
+    "upscale_method": "lanczos_1080p",
+    "motion_style": "cinematic_micro_movements"
+  }
+}

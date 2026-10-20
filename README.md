@@ -648,6 +648,39 @@ Demo 2 的提示詞由本智能體依據「上游工業級 MiniMax-H3 / Ref2VA �
    - 核心衝突：連續時域信號分解為正弦諧波頻譜 vs 窗外修路電鑽（基頻）與隔壁排球隊尖叫（高頻雜訊）造成的大腦頻譜失真。
    - 視覺亮點：教授現場推動音響等化器拉桿，實施低通濾波器（Low-pass Filter）瞬間濾除低頻雜訊流淌出優雅純音樂，展現工數的極致浪漫。
 
+---
+
+## 19. 任務紀錄：[2026-10-21] 蔡欣倫 教授三門大學核心課程 Demo 3、Demo 4、Demo 5 全自動製作完成
+
+### 19.1 使用者需求 (Prompt History)
+> 好的 這是大學的課程，將這三個方案A, B, C 分別做成 demo3, demo4, demo5 這三個方案的老師的聲音請使用 [蔡欣倫]的聲音 @[Quote] OK，GO
+
+### 19.2 工業級規格與防禦機制實作
+1. **蔡欣倫 教授專屬語音克隆 (Voice Cloning, VC)**：
+   - 採用 `Tsai-voice-cloning-skill` (VoxCPM2 on CUDA `bfloat16`)，原生 48kHz 單聲道高品質音訊。
+   - 學生角色配音採用 Microsoft Edge-TTS 臺灣播音級神經網絡語音 (`zh-TW-YunJheNeural` 男聲 / `zh-TW-HsiaoChenNeural` 女聲)。
+2. **零切音閉唇安全緩衝機制 (Zero Audio Cutoff Buffer)**：
+   - 時間軸精準對齊：語音於鏡頭起始 $0.20\,\mathrm{s}$ 啟動。
+   - 結尾緩衝：每鏡頭對白講畢後均預留 $+0.6\,\mathrm{s} \sim +1.7\,\mathrm{s}$ 安全時間，提示詞注入 `"Right after the line the speaker's lips close naturally and stay closed."`，徹底消除語音未講畢畫面即切換之問題。
+   - S3 無口播鏡頭：注入 48kHz 純靜音（Zero-amplitude PCM）引導，全程緊閉雙唇，杜絕幽靈雜動 (Phantom Mumbling)。
+3. **消除動態殘影與高快門靜態三腳架攝影**：
+   - 全局提示詞鎖定：`"LOCKED-OFF STATIC CAMERA on a sturdy tripod; no zoom, no pan. High shutter speed cinematography, crisp sharp edges throughout, zero motion blur, high temporal coherence."`
+   - 原生 $1152 \times 640$（32 步長無黑邊對齊），搭配 16 步 `res_multistep` 取樣器與 `simple` 排程器。
+   - 後期超解析度擴展至 1080p Full HD，以 FFmpeg CRF 12 慢速預設 (Preset Slow) 壓製，燒錄微軟正黑體繁體中文字幕與配樂智慧閃避 (Audio Ducking)。
+
+### 19.3 三大示範作品成果與參數一覽
+| 作品編號 | 課程名稱與主題 | 角色陣容 | 總時長 | 1080p 檔案大小 | 銳利度保留比 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Demo 3** | 《火災學 (Fire Dynamics)》——閃燃臨界點與披薩便當的生死時速 | 蔡教授 (克隆語音) + 學生阿宏 (Edge-TTS) | 27.21s | 30.80 MB | 0.89 ~ 1.25 |
+| **Demo 4** | 《天氣與氣候學 (Weather & Climate)》——科氏力偏向與宿舍水槽的世紀大爭辯 | 蔡教授 (克隆語音) + 學生小萱 (Edge-TTS) | 27.96s | 39.60 MB | 0.92 ~ 1.53 |
+| **Demo 5** | 《工程數學 (Engineering Mathematics)》——傅立葉轉換與隔壁修路噪音的浪漫和解 | 蔡教授 (克隆語音) + 學生阿宇 (Edge-TTS) | 27.96s | 30.16 MB | 1.10 ~ 1.57 |
+
+### 19.4 本地輸出目錄
+- Demo 3：`c:\20261018-demo測試-MiniMax_H3-Wan2.1\01_MiniMax-H3\demo3-fire\`
+- Demo 4：`c:\20261018-demo測試-MiniMax_H3-Wan2.1\01_MiniMax-H3\demo4-climate\`
+- Demo 5：`c:\20261018-demo測試-MiniMax_H3-Wan2.1\01_MiniMax-H3\demo5-engmath\`
+
+
 
 
 

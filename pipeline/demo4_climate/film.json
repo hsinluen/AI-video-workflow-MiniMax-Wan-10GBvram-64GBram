@@ -1,0 +1,109 @@
+{
+  "title": "天氣與氣候學：科氏力偏向與宿舍水槽的世紀大爭辯 (Weather & Climate: The Coriolis Force & The Great Dormitory Sink Debate) 旗艦版",
+  "output_name": "climate_coriolis_h3_1080p.mp4",
+  "engine": "h3",
+  "music_file": "campus_Instrumental.wav",
+  "profile": "fasth3_turbo_16step_pro_v2",
+  "base_seed": 20261100,
+  "sampling": {
+    "steps": 16,
+    "cfg": 4.0,
+    "sampler_name": "res_multistep",
+    "scheduler": "simple",
+    "size": [
+      1152,
+      640
+    ],
+    "crf": 12,
+    "fps": 24,
+    "max_frames": 220,
+    "qc_min_motion": 3.5,
+    "qc_max_drift": 35.0
+  },
+  "chars": {
+    "tsai": {
+      "name": "蔡教授",
+      "look": "Prof. Tsai, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a light-grey casual blazer over a clean white collared shirt",
+      "voice_design": "Prof. Tsai cloned voice, wise, energetic and enthusiastic 52-year-old Taiwanese male atmospheric science professor, engaging and humorous, natural Taiwanese Mandarin accent.",
+      "edge_voice": "Tsai-Cloned"
+    },
+    "hsuan": {
+      "name": "小萱",
+      "look": "Hsuan, a 19-year-old Taiwanese female university atmospheric science student with neat black hair tied in a neat ponytail, thin round wire-rimmed glasses, cheerful bright eyes, youthful energetic face, wearing a soft pastel-yellow knitted cardigan over a clean white collared blouse",
+      "voice_design": "A lively, expressive 19-year-old Taiwanese college female student, curious, spirited and humorous, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-HsiaoChenNeural"
+    }
+  },
+  "h3": {
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, green chalkboard with chalked atmospheric circulation diagrams, sharp facial features, high shutter speed cinematography, crisp edges throughout, zero motion blur, high temporal coherence.",
+    "setting": "A spacious tiered university lecture amphitheater with green chalkboard, wooden desks, desktop globe demonstration apparatus, and student seats",
+    "constraints": [
+      "LOCKED-OFF STATIC CAMERA on a sturdy tripod; no zoom, no pan.",
+      "High shutter speed, sharp focus throughout, zero motion blur, high temporal coherence.",
+      "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
+      "Natural bodily physics and acting without unnatural warping or ghosting."
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "各位同學，北半球科氏力讓氣流右偏，那它能決定洗臉台的水流方向嗎？",
+        "at": 0.20,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Prof. Tsai stands firmly at the lecture platform, gently turning the desktop globe with his left hand while speaking passionately toward the class with a warm engaging smile and natural clear lip movements. Right after finishing his question, his lips close naturally and stay closed, looking attentively out at the students with a knowing smile. High shutter speed, crisp edges, zero motion blur."
+    },
+    {
+      "id": "S2",
+      "refs": [
+        "hsuan"
+      ],
+      "dur": 7.3,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "hsuan",
+        "text": "老師！女宿水槽明明都是順時針排掉，難道我們寢室偷渡到南半球了嗎？",
+        "at": 0.20,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "In the wooden tiered amphitheater desks, Hsuan raises one hand holding her lab notebook, speaking her energetic questioning line with lively lip movements and an earnest debating smile. Right after finishing her line, her lips close naturally into a curious, waiting expression and stay closed. High shutter speed, crisp facial features, zero motion blur."
+    },
+    {
+      "id": "S3",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 4.4,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": null,
+      "action": "Prof. Tsai stands steadily on the lecture platform in front of the chalkboard, holding the small transparent water draining apparatus in both hands, watching the miniature whirlpool drain straight down cleanly. Throughout the entire shot, he keeps his mouth completely closed in a broad, confident closed-mouth grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
+    },
+    {
+      "id": "S4",
+      "refs": [
+        "tsai",
+        "hsuan"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "除非妳的洗臉台有兩百公里大，否則只是拔塞子的角度！下課洗臉吧！",
+        "at": 0.20,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "On the lecture platform, Prof. Tsai laughs heartily while sketching a formula on the board and gesturing cheerfully toward Hsuan. At 0.20 seconds, he speaks his triumphant humorous punchline with clear lip synchronization. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Hsuan chuckles in good humor, clapping her hands happily. High shutter speed, clear classroom atmosphere, zero ghosting."
+    }
+  ]
+}

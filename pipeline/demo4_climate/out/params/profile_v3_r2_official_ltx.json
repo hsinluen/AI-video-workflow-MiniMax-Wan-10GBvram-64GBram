@@ -1,0 +1,28 @@
+{
+  "profile_name": "v3_r2_official_ltx_anchored",
+  "version": "3.0.0",
+  "created_at": "2026-10-16",
+  "description": "R2 官方高保真穩定版 (Official Lightricks LTX-Video Pipeline)：採用 ModelSamplingLTXV + LTXVScheduler (max_shift=2.05, base_shift=0.95, terminal=0.1) + LTXVSpatioTemporalGuidance (blocks='14', scale=1.2, 0.0~0.80) + LTXVPreprocess (CRF=24) + LTXVAddGuide 尾幀錨定，徹底消除尾段臉部融化與殘影。",
+  "settings": {
+    "steps": 40,
+    "cfg": 2.2,
+    "sampler_name": "euler",
+    "scheduler": "ltxv",
+    "max_shift": 2.05,
+    "base_shift": 0.95,
+    "terminal": 0.1,
+    "img_compression": 24,
+    "img_strength": 0.95,
+    "end_anchor_strength": 0.50,
+    "length": 49,
+    "size": [768, 512],
+    "fps": 24,
+    "stg_enabled": true,
+    "stg_blocks": "14",
+    "stg_scale": 1.2,
+    "stg_start_percent": 0.0,
+    "stg_end_percent": 0.80,
+    "upscale_method": "lanczos_unsharp_1080p",
+    "motion_style": "anchored_micro_acting"
+  }
+}
