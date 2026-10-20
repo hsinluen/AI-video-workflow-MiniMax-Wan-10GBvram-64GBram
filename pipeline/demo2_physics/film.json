@@ -3,19 +3,19 @@
   "output_name": "physics_angular_momentum_h3_1080p.mp4",
   "engine": "h3",
   "music_file": "campus_Instrumental.wav",
-  "profile": "fasth3_turbo_8step",
+  "profile": "fasth3_turbo_14step_antighost",
   "base_seed": 20261080,
   "sampling": {
-    "steps": 8,
+    "steps": 14,
     "cfg": 4.0,
-    "sampler_name": "euler",
+    "sampler_name": "res_multistep",
     "scheduler": "simple",
     "size": [
       960,
       544
     ],
     "fps": 24,
-    "max_frames": 124,
+    "max_frames": 220,
     "qc_min_motion": 3.5,
     "qc_max_drift": 35.0
   },
@@ -34,12 +34,12 @@
     }
   },
   "h3": {
-    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white physics equations, sharp facial features, natural micro-expressions.",
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white physics equations, sharp facial features, high temporal coherence, zero ghosting, smooth natural motion.",
     "setting": "A spacious tiered university physics amphitheater lecture hall with green chalkboard, wooden desks, demonstration apparatus, and student seats",
     "constraints": [
       "Camera locked on a sturdy tripod; zero camera shake.",
       "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
-      "Natural bodily physics and acting without unnatural warping."
+      "Natural bodily physics and acting without unnatural warping or ghosting."
     ]
   },
   "shots": [
@@ -48,7 +48,7 @@
       "refs": [
         "chang"
       ],
-      "dur": 4.0,
+      "dur": 7.2,
       "img_strength": 0.88,
       "end_anchor_strength": 0.0,
       "line": {
@@ -56,14 +56,14 @@
         "text": "各位同學，當我坐在旋轉椅上翻轉這個車輪，角動量守恆會發生什麼事？",
         "at": 0.25
       },
-      "action": "Prof. Chang stands firmly at the front lecture platform, holding the spinning bicycle wheel demonstration prop steadily in front of his chest. He speaks with an enthusiastic smile and clear natural lip movements, then looks attentively out toward the students waiting for an answer."
+      "action": "Prof. Chang stands firmly at the front lecture platform, holding the spinning bicycle wheel demonstration prop steadily in front of his chest. He speaks with an enthusiastic smile and clear natural lip movements, then looks attentively out toward the students waiting for an answer. Crisp motion without ghosting."
     },
     {
       "id": "S2",
       "refs": [
         "yu"
       ],
-      "dur": 3.5,
+      "dur": 5.0,
       "img_strength": 0.88,
       "end_anchor_strength": 0.0,
       "line": {
@@ -71,18 +71,18 @@
         "text": "老師不要點我……我只知道期中考我會頭很暈……",
         "at": 0.25
       },
-      "action": "Yu sits in the front row of the tiered amphitheater desks, clutching his General Physics textbook tightly against his chest with both hands. He glances nervously sideways, speaking his anxious line with comical guilty lip movement and a pleading, timid smile trying to hide from the professor's gaze."
+      "action": "Yu sits in the front row of the tiered amphitheater desks, clutching his General Physics textbook tightly against his chest with both hands. He glances nervously sideways, speaking his anxious line with comical guilty lip movement and a pleading, timid smile trying to hide from the professor's gaze, then sighs gently. Crisp facial features, zero motion ghosting."
     },
     {
       "id": "S3",
       "refs": [
         "chang"
       ],
-      "dur": 3.5,
-      "img_strength": 0.93,
-      "end_anchor_strength": 0.15,
+      "dur": 4.2,
+      "img_strength": 0.78,
+      "end_anchor_strength": 0.0,
       "line": null,
-      "action": "Prof. Chang sits on the chrome swivel demonstration stool and tilts the spinning wheel sideways. The stool immediately begins rotating, carrying the professor in a smooth 360-degree spin! He grips the wheel firmly with wide comical excited eyes and open mouth in hilarious delight, keeping his glasses and face sharp."
+      "action": "Prof. Chang sits on the chrome swivel demonstration stool and tilts the spinning wheel sideways. The stool immediately begins rotating, carrying the professor in a smooth 360-degree spin! He grips the wheel firmly with wide comical excited eyes and open mouth in hilarious delight, keeping his glasses and face sharp. Crisp rotational motion, zero blur, no ghosting."
     },
     {
       "id": "S4",
@@ -90,15 +90,15 @@
         "chang",
         "yu"
       ],
-      "dur": 4.5,
-      "img_strength": 0.93,
-      "end_anchor_strength": 0.15,
+      "dur": 7.5,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
       "line": {
         "who": "chang",
         "text": "看到了嗎？這就是物理學的魔力！大家精神都來了吧！",
         "at": 0.25
       },
-      "action": "On the lecture platform, Prof. Chang safely brings the swivel stool to a stop, smiling warmly as he pushes up his glasses and speaks his triumphant line. In the foreground, Yu puts his textbook on the desk, laughing out loud and clapping his hands enthusiastically. Warm classroom atmosphere."
+      "action": "On the lecture platform, Prof. Chang safely brings the swivel stool to a stop, smiling warmly as he pushes up his glasses and speaks his triumphant line. After his speech, he smiles proudly. In the foreground, Yu puts his textbook on the desk, laughing out loud and clapping his hands enthusiastically. Clear classroom atmosphere, zero ghosting."
     }
   ]
 }

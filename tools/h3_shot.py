@@ -226,9 +226,11 @@ def build_graph_h3(spec, prompt, base, tag):
     w, h = spec.get("size", [960, 544])
     w, h = snap32(w), snap32(h)
     duration = float(spec.get("duration", 3.0))
-    length = frames_for_h3(duration)
+    length = int(spec.get("length", 0)) or frames_for_h3(duration)
     seed = int(spec.get("seed", 42))
-    steps = int(spec.get("steps", 8))  # FastH3 4-8 steps default for 10GB VRAM
+    steps = int(spec.get("steps", 8))  # FastH3 4-8 steps default for 10GB VRAM, can be increased to 12-16 for anti-ghosting
+    sampler_name = spec.get("sampler_name", "res_multistep")
+    scheduler = spec.get("scheduler", "simple")
 
     h3_model, _ = find_model_file(["diffusion_models", "unet"], ["minimax_h3_fl2va_pruned-Q4_K.gguf", "minimax_h3_ref2va_pruned-Q4_K.gguf", "minimax_h3_ref2va_pruned_fp8_scaled.safetensors"])
     if not h3_model:
@@ -267,8 +269,8 @@ def build_graph_h3(spec, prompt, base, tag):
 
     g["6"] = {"class_type": "MiniMaxH3ImageToVideo", "inputs": {"clip": clip_node, "vae": ["3", 0], "prompt": prompt, "width": w, "height": h, "length": length, "first_frame": ["5", 0]}}
     g["7"] = {"class_type": "RandomNoise", "inputs": {"noise_seed": seed}}
-    g["8"] = {"class_type": "KSamplerSelect", "inputs": {"sampler_name": "res_multistep"}}
-    g["9"] = {"class_type": "BasicScheduler", "inputs": {"model": model_node, "scheduler": "simple", "steps": steps, "denoise": 1.0}}
+    g["8"] = {"class_type": "KSamplerSelect", "inputs": {"sampler_name": sampler_name}}
+    g["9"] = {"class_type": "BasicScheduler", "inputs": {"model": model_node, "scheduler": scheduler, "steps": steps, "denoise": 1.0}}
     g["10"] = {"class_type": "BasicGuider", "inputs": {"model": model_node, "conditioning": ["6", 0]}}
     g["11"] = {"class_type": "SamplerCustomAdvanced", "inputs": {"noise": ["7", 0], "guider": ["10", 0], "sampler": ["8", 0], "sigmas": ["9", 0], "latent_image": ["6", 1]}}
     g["12"] = {"class_type": "VAEDecode", "inputs": {"samples": ["11", 0], "vae": ["3", 0]}}
