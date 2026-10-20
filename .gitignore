@@ -44,20 +44,6 @@ test_lock.bin
 !pipeline/demo_local/out/music/
 !pipeline/demo_local/out/music/campus_Instrumental.wav
 
-# 允許 demo2_physics 示範素材納入倉庫
-!pipeline/demo2_physics/out/
-!pipeline/demo2_physics/out/chars/
-!pipeline/demo2_physics/out/chars/*.png
-!pipeline/demo2_physics/out/first/
-!pipeline/demo2_physics/out/first/*.png
-!pipeline/demo2_physics/out/voice_picks.json
-!pipeline/demo2_physics/out/voice/
-!pipeline/demo2_physics/out/voice/bv/
-!pipeline/demo2_physics/out/voice/bv/line*.wav
-!pipeline/demo2_physics/out/voice/bv/line*.mp3
-!pipeline/demo2_physics/out/music/
-!pipeline/demo2_physics/out/music/campus_Instrumental.wav
-
 # 測試用生成目錄排除
 pipeline/20261016-*/out/
 pipeline/missing_bento/out/
