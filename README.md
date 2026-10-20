@@ -580,6 +580,23 @@
    - 解決問題：避免配樂頻率遮蔽台詞人聲。
    - 硬體承受度：FFmpeg 混音處理，零 VRAM 負擔。
 
+### 16.3 執行結果與驗收成果 (V2 Execution & Walkthrough Log)
+1. **全自動渲染跑通 (耗時 5069.9s)**：
+   - 解析度全面升級為 $1152 \times 640$（總像素提升 $+41\%$），採樣步數設為 16 步，封裝碼率設為 CRF 12。
+   - VRAM 峰值穩定在 $5.6\,\mathrm{GB} \sim 6.2\,\mathrm{GB}$，在 10GB 顯卡上全程穩定運行無任何記憶體不足（OOM）問題。
+   - 成功串接 `MiniMaxH3AddGuide` 節點：S3 鏡頭注入 48kHz 純靜音音軌，張教授自轉時嘴唇緊閉微笑，**徹底根除開口無聲（幽靈嘟囔）**。
+   - S1、S2、S4 經由開閉嘴時序指令約束，對白講完瞬間嘴型自然閉合，對嘴準確度大幅提升。
+2. **自動品檢結果全數通過 (QC=PASS)**：
+   - S1（張教授提問）：`max_drift=10.98`, `sharpness_retention=1.127`, `verdict=OK`
+   - S2（阿宇心虛）：`max_drift=14.0`, `sharpness_retention=0.974`, `verdict=OK`（V1 原先為 61.42 警報，V2 成功降至 14.0）
+   - S3（自轉高潮）：`max_drift=26.4`, `sharpness_retention=0.872`, `verdict=OK`（相鄰幀運動量平穩保持在 $16.4 \sim 19.8$，無拉扯重影）
+   - S4（總結收尾）：`max_drift=32.12`, `sharpness_retention=0.861`, `verdict=OK`（V1 原先為 53.14 警報，V2 成功降至 32.12）
+3. **成品歸檔與發布**：
+   - 1080p 成片：`c:\20261018-demo測試-MiniMax_H3-Wan2.1\01_MiniMax-H3\demo2-physics\physics_angular_momentum_h3_1080p_v2.mp4` (31.30 MB, 25.14s)
+   - 720p 成片：`c:\20261018-demo測試-MiniMax_H3-Wan2.1\01_MiniMax-H3\demo2-physics\physics_angular_momentum_h3_720p_v2.mp4` (14.55 MB, 25.14s)
+   - GitHub 倉庫同步：Commit `af0cf57` 成功推播至 `https://github.com/hsinluen/AI-video-workflow-MiniMax-Wan-10GBvram-64GBram.git`。
+
+
 
 
 
