@@ -1,19 +1,20 @@
 {
-  "title": "普通物理課的角動量守恆驚魂記 (General Physics: Conservation of Angular Momentum Adventure)",
-  "output_name": "physics_angular_momentum_h3_1080p.mp4",
+  "title": "普通物理課的角動量守恆驚魂記 (General Physics: Conservation of Angular Momentum Adventure) V2 旗艦版",
+  "output_name": "physics_angular_momentum_h3_1080p_v2.mp4",
   "engine": "h3",
   "music_file": "campus_Instrumental.wav",
-  "profile": "fasth3_turbo_14step_antighost",
+  "profile": "fasth3_turbo_16step_pro_v2",
   "base_seed": 20261080,
   "sampling": {
-    "steps": 14,
+    "steps": 16,
     "cfg": 4.0,
     "sampler_name": "res_multistep",
     "scheduler": "simple",
     "size": [
-      960,
-      544
+      1152,
+      640
     ],
+    "crf": 12,
     "fps": 24,
     "max_frames": 220,
     "qc_min_motion": 3.5,
@@ -34,10 +35,11 @@
     }
   },
   "h3": {
-    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white physics equations, sharp facial features, high temporal coherence, zero ghosting, smooth natural motion.",
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white physics equations, sharp facial features, high shutter speed cinematography, crisp edges throughout, zero motion blur, high temporal coherence.",
     "setting": "A spacious tiered university physics amphitheater lecture hall with green chalkboard, wooden desks, demonstration apparatus, and student seats",
     "constraints": [
-      "Camera locked on a sturdy tripod; zero camera shake.",
+      "LOCKED-OFF STATIC CAMERA on a sturdy tripod; no zoom, no pan.",
+      "High shutter speed, sharp focus throughout, zero motion blur, high temporal coherence.",
       "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
       "Natural bodily physics and acting without unnatural warping or ghosting."
     ]
@@ -54,9 +56,10 @@
       "line": {
         "who": "chang",
         "text": "各位同學，當我坐在旋轉椅上翻轉這個車輪，角動量守恆會發生什麼事？",
-        "at": 0.25
+        "at": 0.25,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
       },
-      "action": "Prof. Chang stands firmly at the front lecture platform, holding the spinning bicycle wheel demonstration prop steadily in front of his chest. He speaks with an enthusiastic smile and clear natural lip movements, then looks attentively out toward the students waiting for an answer. Crisp motion without ghosting."
+      "action": "Prof. Chang stands firmly at the front lecture platform, holding the spinning bicycle wheel demonstration prop steadily in front of his chest. At 0.25 seconds, he speaks his question with an enthusiastic smile and natural lip movements. Right after the question finishes, his lips close naturally and stay closed, and he looks attentively out toward the students with a warm smile waiting for an answer. High shutter speed, crisp edges, zero motion blur."
     },
     {
       "id": "S2",
@@ -69,9 +72,10 @@
       "line": {
         "who": "yu",
         "text": "老師不要點我……我只知道期中考我會頭很暈……",
-        "at": 0.25
+        "at": 0.25,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
       },
-      "action": "Yu sits in the front row of the tiered amphitheater desks, clutching his General Physics textbook tightly against his chest with both hands. He glances nervously sideways, speaking his anxious line with comical guilty lip movement and a pleading, timid smile trying to hide from the professor's gaze, then sighs gently. Crisp facial features, zero motion ghosting."
+      "action": "Yu sits in the front row of the tiered amphitheater desks, clutching his General Physics textbook tightly against his chest with both hands. At 0.25 seconds, he speaks his anxious line with comical guilty lip movement and a pleading, timid smile trying to hide from the professor's gaze. Right after finishing his line, his lips close naturally and stay closed, breathing a small quiet sigh. High shutter speed, zero motion blur."
     },
     {
       "id": "S3",
@@ -82,7 +86,7 @@
       "img_strength": 0.78,
       "end_anchor_strength": 0.0,
       "line": null,
-      "action": "Prof. Chang sits on the chrome swivel demonstration stool and tilts the spinning wheel sideways. The stool immediately begins rotating, carrying the professor in a smooth 360-degree spin! He grips the wheel firmly with wide comical excited eyes and open mouth in hilarious delight, keeping his glasses and face sharp. Crisp rotational motion, zero blur, no ghosting."
+      "action": "Prof. Chang sits on the chrome swivel demonstration stool and tilts the spinning bicycle wheel sideways. The stool immediately begins rotating, carrying the professor in a smooth 360-degree spin. Throughout the entire shot, he keeps his mouth completely closed in a broad, excited closed-mouth grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp rotational motion, zero blur, no ghosting."
     },
     {
       "id": "S4",
@@ -96,9 +100,10 @@
       "line": {
         "who": "chang",
         "text": "看到了嗎？這就是物理學的魔力！大家精神都來了吧！",
-        "at": 0.25
+        "at": 0.25,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
       },
-      "action": "On the lecture platform, Prof. Chang safely brings the swivel stool to a stop, smiling warmly as he pushes up his glasses and speaks his triumphant line. After his speech, he smiles proudly. In the foreground, Yu puts his textbook on the desk, laughing out loud and clapping his hands enthusiastically. Clear classroom atmosphere, zero ghosting."
+      "action": "On the lecture platform, Prof. Chang safely brings the swivel stool to a steady stop. At 0.25 seconds, he speaks his triumphant line with clear lip synchronization while pushing up his glasses. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground, Yu puts down his textbook, laughing out loud with a wide open joyful laugh and clapping his hands enthusiastically. High shutter speed, clear classroom atmosphere, zero ghosting."
     }
   ]
 }

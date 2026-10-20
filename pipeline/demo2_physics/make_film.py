@@ -128,7 +128,7 @@ def stage_h3():
             dlg = [dict(subject=ln["who"], line=ln["text"], lang="Chinese", after=ln.get("after", "After the line the speaker's lips close naturally."))]
         with wave.open(str(od / "guide.wav"), "wb") as w:
             w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr); w.writeframes(bytes(buf))
-        default_size = [960, 544] if engine in ("h3", "minimax") else [848, 480]
+        default_size = [1152, 640] if engine in ("h3", "minimax") else [848, 480]
         spec = dict(
             duration=round(secs, 3), length=length, size=S.get("size", default_size),
             seed=int(s.get("seed", CFG.get("base_seed", 20261040) + int(s["id"][1:]))),
@@ -148,6 +148,7 @@ def stage_h3():
             shots=[dict(camera=s.get("camera", CFG["h3"].get("camera", "Static tripod shot.")), action=s["action"], dialogue=dlg)],
         )
         spec["engine"] = engine
+        spec["crf"] = int(S.get("crf", 12))
         (od / "spec.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"[{engine.upper()}] {s['id']}: {length} frames ({secs:.2f}s realtime), seed {spec['seed']}", flush=True)
         run([PYH3, T / "h3_shot.py", od / "spec.json", "--out", od, "--engine", engine])
@@ -224,7 +225,7 @@ def stage_cut():
     run(["ffmpeg", "-y", "-loglevel", "error", "-i", "cut/joined.mp4", "-i", OUT / "music" / CFG["music_file"], "-filter_complex",
          f"[1:a]volume=0.18,afade=t=out:st={t - 2:.2f}:d=2[m];[0:a][m]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-16:TP=-1.5[a];"
          f"[0:v]subtitles=cut/subs.srt:force_style='FontName=Microsoft JhengHei,FontSize={font_size},Outline=2'[v]",
-         "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "16", "-preset", "slow", "-c:a", "aac", "-b:a", "192k", out_mp4])
+         "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "12", "-preset", "slow", "-c:a", "aac", "-b:a", "192k", out_mp4])
     probe = json.loads(run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height,codec_name",
                             "-of", "json", out_mp4]).stdout)["streams"][0]
     qc = review()

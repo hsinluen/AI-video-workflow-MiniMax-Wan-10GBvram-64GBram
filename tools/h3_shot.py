@@ -268,11 +268,26 @@ def build_graph_h3(spec, prompt, base, tag):
         model_node = ["lora", 0]
 
     g["6"] = {"class_type": "MiniMaxH3ImageToVideo", "inputs": {"clip": clip_node, "vae": ["3", 0], "prompt": prompt, "width": w, "height": h, "length": length, "first_frame": ["5", 0]}}
+
+    cond = ["6", 0]
+    latent = ["6", 1]
+    audio_spec = spec.get("audio", {})
+    fixed_audio = audio_spec.get("fixed", {}).get("file")
+    if fixed_audio:
+        audio_path = Path(fixed_audio)
+        if not audio_path.is_absolute():
+            audio_path = base / audio_path
+        if audio_path.exists():
+            staged_audio = stage_file(audio_path, f"{tag}_audio.wav")
+            g["32"] = {"class_type": "LoadAudio", "inputs": {"audio": staged_audio}}
+            g["33"] = {"class_type": "MiniMaxH3AddGuide", "inputs": {"positive": cond, "latent": latent, "audio_vae": ["4", 0], "audio": ["32", 0], "frame_idx": 0}}
+            cond = ["33", 0]
+
     g["7"] = {"class_type": "RandomNoise", "inputs": {"noise_seed": seed}}
     g["8"] = {"class_type": "KSamplerSelect", "inputs": {"sampler_name": sampler_name}}
     g["9"] = {"class_type": "BasicScheduler", "inputs": {"model": model_node, "scheduler": scheduler, "steps": steps, "denoise": 1.0}}
-    g["10"] = {"class_type": "BasicGuider", "inputs": {"model": model_node, "conditioning": ["6", 0]}}
-    g["11"] = {"class_type": "SamplerCustomAdvanced", "inputs": {"noise": ["7", 0], "guider": ["10", 0], "sampler": ["8", 0], "sigmas": ["9", 0], "latent_image": ["6", 1]}}
+    g["10"] = {"class_type": "BasicGuider", "inputs": {"model": model_node, "conditioning": cond}}
+    g["11"] = {"class_type": "SamplerCustomAdvanced", "inputs": {"noise": ["7", 0], "guider": ["10", 0], "sampler": ["8", 0], "sigmas": ["9", 0], "latent_image": latent}}
     g["12"] = {"class_type": "VAEDecode", "inputs": {"samples": ["11", 0], "vae": ["3", 0]}}
     g["15"] = {"class_type": "SaveImage", "inputs": {"images": ["12", 0], "filename_prefix": f"h3_shot_png/{tag}/f"}}
 
@@ -404,7 +419,8 @@ def run_generation(spec_path: Path, out_dir: Path, engine: str):
                 cmd += ["-i", str(guide_audio), "-map", "0:v", "-map", "1:a"]
             else:
                 cmd += ["-map", "0:v"]
-            cmd += ["-vf", f"fps={FPS}", "-r", str(FPS), "-c:v", "libx264", "-crf", "14", "-preset", "slow", "-pix_fmt", "yuv420p",
+            crf = str(spec.get("crf", 12))
+            cmd += ["-vf", f"fps={FPS}", "-r", str(FPS), "-c:v", "libx264", "-crf", crf, "-preset", "slow", "-pix_fmt", "yuv420p",
                     "-c:a", "aac", "-b:a", "192k", str(out_dir / "clip.mp4")]
             subprocess.run(cmd, check=True)
             v_found = True
