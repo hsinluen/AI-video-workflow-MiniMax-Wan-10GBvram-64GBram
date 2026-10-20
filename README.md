@@ -508,5 +508,48 @@
    - 720p 成片：`c:\20261018-demo測試-MiniMax_H3-Wan2.1\01_MiniMax-H3\demo2-physics\physics_angular_momentum_h3_720p.mp4` (11.84 MB, 25.14s)
    - GitHub 倉庫更新：commit `c9e845b` 成功同步至 `https://github.com/hsinluen/AI-video-workflow-MiniMax-Wan-10GBvram-64GBram.git`。
 
+---
+
+## 15. 任務紀錄：[2026-10-20] 深入比對上游 shanshiba-workflow-16gvram-64gram 核心參數與專業電影級製作建議
+
+### 15.1 使用者需求 (Prompt History)
+> 請查閱REPO https://github.com/mathruffian-dot/shanshiba-workflow-16gvram-64gram 所使用的這些參數列表比較，另外還有甚麼參數設定 不太一樣者 請列出 並給建議，讓我能產生出更專業的影片。
+
+### 15.2 核心參數橫向矩陣對照 (Parameters Comparison Matrix)
+針對上游原版（`shanshiba-workflow-16gvram-64gram`）與本機 10GB/64GB 優化版本之詳細對照：
+
+| 模組維度 | 上游原版規格 (RTX 4080/5090 16G/32G) | 本機 10GB 深度優化版 (RTX 3080 10G) | 差異原因與機制分析 |
+| :--- | :--- | :--- | :--- |
+| **主生成模型架構** | MiniMax-H3 Ref2VA 剪枝 INT8 (`minimax_h3_ref2va_pruned_int8_convrot.safetensors`) | MiniMax-H3 FL2VA Q4_K_M GGUF (`10.64 GB`) + FastH3 Turbo LoRA (`1.82 GB`) | 本機 10GB 顯存無法原生全載 16GB INT8 完整權重；透過 GGUF 混合精度量化與動態卸載，將 VRAM 壓在 $4.6 \sim 5.1\,\mathrm{GB}$。 |
+| **文字編碼器載體** | Qwen3-VL 32B INT8 / NVFP4 (`qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`) | Qwen3-VL 32B Q2_K_M GGUF (`12.20 GB`) | 透過 64GB 系統 RAM 動態常駐（0 MB VRAM 殘留），維持 32B 大語言模型超強語義理解與多模態特徵捕捉。 |
+| **原生採樣步數 (Steps)** | `steps: 14` (定稿高畫質) / `steps: 4` (DMAD 4 步極速草稿) | `steps: 14` (最新防殘影標準) / `steps: 8` (Turbo 基礎) | 上游原版在非 Turbo 下需 14 步；本機結合 Turbo 蒸餾 LoRA 跑 14 步可達到雙倍流匹配精度，消除高速自轉殘影。 |
+| **生成解析度 (Size)** | $1344 \times 768$ (16:9 橫式) / $768 \times 1344$ (9:16 直式) | $960 \times 544$ (16:9 橫式) | 10GB 顯存防溢出安全尺寸（同時滿足 $32$ 的倍數），再經由 RTX VSR / Lanczos 升頻至 $1920 \times 1080$。 |
+| **採樣器與調度器** | `res_multistep` + `simple` (denoise: 1.0) | `res_multistep` + `simple` (denoise: 1.0) | 保持一致，多步高階求解器在連續時間流中穩定性最佳。 |
+| **快取機制 (EasyCache)** | 強制關閉 (`easycache: false`) | 強制關閉 (`easycache: false`) | 上游 Top 25 踩坑第 1 條：EasyCache 會造成近景模糊、靜止無聲鏡頭產生油畫狀雜訊。 |
+| **對白安全時間尾隙** | `dur = max(sh["dur"], end + 0.6)` (保留 $+0.6\,\mathrm{s}$) | `dur` 實配留有 $+0.68\,\mathrm{s} \sim +1.09\,\mathrm{s}$ 餘裕 | 徹底保證發音結束與閉嘴自然過渡，防止畫面或鏡頭提前截斷。 |
+| **無台詞面部音訊引導** | 強制附加靜音導引音軌 (`silent guide wav`) | 透過 `MiniMaxH3AddGuide` 傳入靜音緩衝區 | 避免 MiniMax-H3 在看到人臉且無音軌時產生幽靈嘟囔（Phantom Mumbling）。 |
+| **相機防晃鎖定提示** | `LOCKED-OFF STATIC CAMERA on a tripod; no zoom, no pan.` | 提示詞寫入 `Camera locked on a sturdy tripod; zero camera shake.` | 嚴格防範 H3 自主運鏡造成背景桌椅滑動與邊界漂移。 |
+| **多角色提示詞防冒出** | 單人鏡完全不提旁人；多人鏡寫 `Exactly N people`，**只給首幀** | 遵循相同原則，不給多人多餘身份圖 | 避免 H3 多生成多餘角色或臉部錯置。 |
+| **無損影格儲存與編碼** | ComfyUI 輸出逐幀無損 PNG，再以 FFmpeg CRF 12 重構 MP4 | 採用相同 PNG 佇列收集與 CRF 12/16 慢速編碼 | 規避 ComfyUI SaveVideo 節點僅有 3 Mbps 之低碼率壓縮失真。 |
+| **全自動品質檢查 (QC)** | 五遍自審（抽幀膠捲、ASR 辨識、色度雜訊、黑格定格、接點明暗） | 整合抽樣膠捲、光流漂移 (Drift)、相鄰運動量 (Motion) 與清晰度保留率 | 達成工業級量化驗收。 |
+
+### 15.3 邁向院線級/專業級影片製作之 7 大核心建議 (Professional Directing Guidelines)
+1. **多機位首幀空間鎖定（Blender 方塊人布置圖與底圖一致性）**：
+   - 上游強調「不同視角的首幀應從同一張母版底圖編輯」。可利用 Blender 快速建置虛擬三維空間，確保「黑板在正前方、學生面向黑板、窗戶在左側」，徹底根除 AI 在不同分鏡中產生背景顛倒的問題。
+2. **尾幀（Last Frame）使用心法**：
+   - **切忌首尾幀使用同一張圖**（會導致畫面完全凍結無動態）。
+   - 僅在「特定大幅度長動作（如低頭撿東西、轉身走入走廊、變形消失）」時使用尾幀，且尾幀必須是同一場景微調動作的差異圖，並將相機視角 100% 鎖死。
+3. **對嘴與長音結束能量檢測**：
+   - 提示詞中明確指定動作發生時間點（`"The moment the word is spoken, he ..."`）。長音台詞需在提示詞中加註音節持續秒數及 `"keeps lips open until audio ends"`。
+4. **角色臉部佔比黃金法則**：
+   - 主角面部在畫面中佔畫高至少需達 $10\%$ 以上（胸部以上中景或近景）。全身遠景中的臉部特徵在擴散模型潛空間解析度過低，後續超解析度亦難以修復。
+5. **台詞背景遮蔽防禦（Audio Masking）**：
+   - 背景環境音（Ambience）在人物開口說話期間應自動衰減（Duck）至 $30\%$ 以下，避免 ASR 與觀眾產生聽覺遮蔽。
+6. **分鏡轉場與色調連貫性**：
+   - 跨鏡頭接點的明暗差不可超過 $12$（灰階），同機位接續對白鏡頭建議採用 $0.3\,\mathrm{s}$ 溶接（Dissolve）以防跳接突兀。
+7. **本地定妝照與首幀生成最佳化**：
+   - 單人角色參考圖一律採用乾淨單張半身照，避免餵入九宮格拼貼圖以防 AI 產生拼貼幻覺。
+
+
 
 
