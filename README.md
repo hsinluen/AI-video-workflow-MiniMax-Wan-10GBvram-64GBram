@@ -596,6 +596,41 @@
    - 720p 成片：`c:\20261018-demo測試-MiniMax_H3-Wan2.1\01_MiniMax-H3\demo2-physics\physics_angular_momentum_h3_720p_v2.mp4` (14.55 MB, 25.14s)
    - GitHub 倉庫同步：Commit `af0cf57` 成功推播至 `https://github.com/hsinluen/AI-video-workflow-MiniMax-Wan-10GBvram-64GBram.git`。
 
+---
+
+## 17. 任務紀錄：[2026-10-20] 示範片清單盤點、Demo 2 提示詞架構解密與 Demo 3 創意輸入指引
+
+### 17.1 使用者需求 (Prompt History)
+> 這個repo 有demo 3 ? 原本demo 2 的prompt 您怎麼產生? 若要產生新的demo (關於大學上課的有趣情境) 該如何給你prompt ?
+
+### 17.2 專案現有 Demo 清單盤點
+1. **Demo 1**：《大學新生的第一堂課：迷航記》（Freshman Campus: Lost on Campus）
+   - 路徑：`pipeline/demo_local/`
+   - 角色：大一新生阿凱 (Kai) 與大二學姐晴晴 (Ching)。
+   - 情境：文學院拱門拿地圖問微積分教室，發現跑錯整個校園，學姐借單車相救。
+2. **Demo 2**：《普通物理課的角動量守恆驚魂記》（General Physics: Conservation of Angular Momentum Adventure）
+   - 路徑：`pipeline/demo2_physics/`
+   - 角色：52 歲張教授 (Prof. Chang) 與大一新生阿宇 (Yu)。
+   - 情境：階梯大教室翻轉旋轉車輪，教授坐在旋轉椅上自轉失控，師生熱烈歡笑。
+3. **Demo 3**：目前倉庫中**尚未建立 Demo 3**，正等待規劃與製作！
+
+### 17.3 Demo 2 核心提示詞與工程管線產生機制
+Demo 2 的提示詞由本智能體依據「上游工業級 MiniMax-H3 / Ref2VA 六段式架構」全自動逆向工程生成：
+1. **空間與人物鎖定**：張教授（52 歲、灰西裝白襯衫、銀邊矩形眼鏡、微胖親切）、阿宇（18 歲、深藍連帽衫、前排木桌）。
+2. **五層提示詞結構 (Prompt Stack)**：
+   - `style`：35mm 膠卷電影感、溫暖晨光、階梯教室大黑板、高快門攝影。
+   - `setting`：階梯教室講台、物理實驗器材、前排課桌。
+   - `camera`：三腳架死鎖（LOCKED-OFF STATIC CAMERA）、零動態模糊。
+   - `action`：精準微動作（持輪、翻轉、360 度旋轉椅自轉神態、結束煞停閉嘴微笑）。
+   - `dialogue & lip-sync`：精確到 $0.25\,\mathrm{s}$ 發音，結尾注入 `"lips close naturally and stay closed"`，無台詞鏡頭注入 48kHz 純靜音音軌。
+
+### 17.4 新增大學課堂 Demo 3 之 Prompt 輸入規範與模板
+使用者可採用以下三種靈活方式提供輸入：
+- **模式 A（一句話靈感點菜法，最推薦）**：提供課程主題與核心笑點（例如「有機化學實驗變色冒煙」、「微積分老師畫圓驚豔全場」、「資工系打 Code 現場有無窮迴圈 Bug」），其餘分鏡、角色、提示詞、配音、生圖全自動完成。
+- **模式 B（四鏡節拍大綱法）**：列出科目、角色名、四個分鏡的起承轉合大綱。
+- **模式 C（導演級全自訂分鏡法）**：提供自訂台詞、景別與動作細節。
+
+
 
 
 
