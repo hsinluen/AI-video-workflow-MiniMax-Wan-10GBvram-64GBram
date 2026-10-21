@@ -9,7 +9,7 @@ OUT_BV = HERE / "out" / "voice" / "bv"
 OUT_BV.mkdir(parents=True, exist_ok=True)
 
 PYTHON_VOX = r"C:\2026-AntiGravity_Voice_cloner\voxcpm2-voice-cloner\.venv\Scripts\python.exe"
-CLONE_SCRIPT = r"C:\Users\hsinluen\.gemini\config\skills\Tsai-voice-cloning-skill\scripts\clone_tsai.py"
+CLONE_SCRIPT = str(Path.home() / ".gemini" / "config" / "skills" / "Tsai-voice-cloning-skill" / "scripts" / "clone_tsai.py")
 EDGE_TTS = r"C:\AI\Voice\venv\Scripts\edge-tts.exe"
 
 lines = [

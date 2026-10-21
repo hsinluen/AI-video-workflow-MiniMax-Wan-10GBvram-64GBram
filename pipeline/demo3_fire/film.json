@@ -22,9 +22,9 @@
   },
   "chars": {
     "tsai": {
-      "name": "蔡教授",
-      "look": "Prof. Tsai, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a dark navy-blue casual blazer over a clean light-blue collared shirt",
-      "voice_design": "Prof. Tsai cloned voice, wise, energetic and enthusiastic 52-year-old Taiwanese male engineering professor, engaging and humorous, natural Taiwanese Mandarin accent.",
+      "name": "專任教師",
+      "look": "The faculty professor, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a dark navy-blue casual blazer over a clean light-blue collared shirt",
+      "voice_design": "The faculty professor cloned voice, wise, energetic and enthusiastic 52-year-old Taiwanese male engineering professor, engaging and humorous, natural Taiwanese Mandarin accent.",
       "edge_voice": "Tsai-Cloned"
     },
     "hong": {
@@ -59,7 +59,7 @@
         "at": 0.25,
         "after": "Right after the line the speaker's lips close naturally and stay closed."
       },
-      "action": "Prof. Tsai stands firmly at the front lecture platform, holding the red laser pointer steadily in his right hand pointing toward the fire dynamics curve on the chalkboard. At 0.25 seconds, he speaks his question with an enthusiastic smile and natural lip movements. Right after the question finishes, his lips close naturally and stay closed, and he looks attentively out toward the students with a warm smile waiting for an answer. High shutter speed, crisp edges, zero motion blur."
+      "action": "The faculty professor stands firmly at the front lecture platform, holding the red laser pointer steadily in his right hand pointing toward the fire dynamics curve on the chalkboard. At 0.25 seconds, he speaks his question with an enthusiastic smile and natural lip movements. Right after the question finishes, his lips close naturally and stay closed, and he looks attentively out toward the students with a warm smile waiting for an answer. High shutter speed, crisp edges, zero motion blur."
     },
     {
       "id": "S2",
@@ -86,7 +86,7 @@
       "img_strength": 0.82,
       "end_anchor_strength": 0.0,
       "line": null,
-      "action": "Prof. Tsai stands steadily on the lecture platform in front of the chalkboard, holding the professional handheld infrared thermal imaging camera in both hands and aiming it at the steaming coffee mug on the lectern. The small screen shows false-color heat contours. Throughout the entire shot, he keeps his mouth completely closed in a broad, confident closed-mouth grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
+      "action": "The faculty professor stands steadily on the lecture platform in front of the chalkboard, holding the professional handheld infrared thermal imaging camera in both hands and aiming it at the steaming coffee mug on the lectern. The small screen shows false-color heat contours. Throughout the entire shot, he keeps his mouth completely closed in a broad, confident closed-mouth grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
     },
     {
       "id": "S4",
@@ -103,7 +103,7 @@
         "at": 0.25,
         "after": "Right after the line the speaker's lips close naturally and stay closed."
       },
-      "action": "On the lecture platform, Prof. Tsai safely sets down the thermal camera on the lectern. At 0.25 seconds, he speaks his triumphant humorous line with clear lip synchronization while smiling warmly and gesturing toward the classroom door. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Hong puts down his textbook, laughing out loud with a wide open joyful laugh and clapping his hands enthusiastically. High shutter speed, clear classroom atmosphere, zero ghosting."
+      "action": "On the lecture platform, The faculty professor safely sets down the thermal camera on the lectern. At 0.25 seconds, he speaks his triumphant humorous line with clear lip synchronization while smiling warmly and gesturing toward the classroom door. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Hong puts down his textbook, laughing out loud with a wide open joyful laugh and clapping his hands enthusiastically. High shutter speed, clear classroom atmosphere, zero ghosting."
     }
   ]
 }

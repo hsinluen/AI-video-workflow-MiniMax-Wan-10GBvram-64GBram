@@ -22,9 +22,9 @@
   },
   "chars": {
     "tsai": {
-      "name": "蔡教授",
-      "look": "Prof. Tsai, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a light-grey casual blazer over a clean white collared shirt",
-      "voice_design": "Prof. Tsai cloned voice, wise, energetic and enthusiastic 52-year-old Taiwanese male atmospheric science professor, engaging and humorous, natural Taiwanese Mandarin accent.",
+      "name": "專任教師",
+      "look": "The faculty professor, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a light-grey casual blazer over a clean white collared shirt",
+      "voice_design": "The faculty professor cloned voice, wise, energetic and enthusiastic 52-year-old Taiwanese male atmospheric science professor, engaging and humorous, natural Taiwanese Mandarin accent.",
       "edge_voice": "Tsai-Cloned"
     },
     "hsuan": {
@@ -59,7 +59,7 @@
         "at": 0.20,
         "after": "Right after the line the speaker's lips close naturally and stay closed."
       },
-      "action": "Prof. Tsai stands firmly at the lecture platform, gently turning the desktop globe with his left hand while speaking passionately toward the class with a warm engaging smile and natural clear lip movements. Right after finishing his question, his lips close naturally and stay closed, looking attentively out at the students with a knowing smile. High shutter speed, crisp edges, zero motion blur."
+      "action": "The faculty professor stands firmly at the lecture platform, gently turning the desktop globe with his left hand while speaking passionately toward the class with a warm engaging smile and natural clear lip movements. Right after finishing his question, his lips close naturally and stay closed, looking attentively out at the students with a knowing smile. High shutter speed, crisp edges, zero motion blur."
     },
     {
       "id": "S2",
@@ -86,7 +86,7 @@
       "img_strength": 0.82,
       "end_anchor_strength": 0.0,
       "line": null,
-      "action": "Prof. Tsai stands steadily on the lecture platform in front of the chalkboard, holding the small transparent water draining apparatus in both hands, watching the miniature whirlpool drain straight down cleanly. Throughout the entire shot, he keeps his mouth completely closed in a broad, confident closed-mouth grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
+      "action": "The faculty professor stands steadily on the lecture platform in front of the chalkboard, holding the small transparent water draining apparatus in both hands, watching the miniature whirlpool drain straight down cleanly. Throughout the entire shot, he keeps his mouth completely closed in a broad, confident closed-mouth grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
     },
     {
       "id": "S4",
@@ -103,7 +103,7 @@
         "at": 0.20,
         "after": "Right after the line the speaker's lips close naturally and stay closed."
       },
-      "action": "On the lecture platform, Prof. Tsai laughs heartily while sketching a formula on the board and gesturing cheerfully toward Hsuan. At 0.20 seconds, he speaks his triumphant humorous punchline with clear lip synchronization. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Hsuan chuckles in good humor, clapping her hands happily. High shutter speed, clear classroom atmosphere, zero ghosting."
+      "action": "On the lecture platform, The faculty professor laughs heartily while sketching a formula on the board and gesturing cheerfully toward Hsuan. At 0.20 seconds, he speaks his triumphant humorous punchline with clear lip synchronization. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Hsuan chuckles in good humor, clapping her hands happily. High shutter speed, clear classroom atmosphere, zero ghosting."
     }
   ]
 }

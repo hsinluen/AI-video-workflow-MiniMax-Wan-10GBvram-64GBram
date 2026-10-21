@@ -19,7 +19,7 @@ for strip in src_review.glob("strip_*.jpg"):
 print("Copied files to 01_MiniMax-H3/demo2-physics")
 
 # 2. Artifact directory
-art_dir = Path(r"C:\Users\hsinluen\.gemini\antigravity\brain\c9c0f7be-5137-4665-9e94-527d13dfe687")
+art_dir = Path.home() / ".gemini" / "antigravity" / "brain" / "c9c0f7be-5137-4665-9e94-527d13dfe687"
 shutil.copy2(src_cut / "physics_angular_momentum_h3_1080p.mp4", art_dir / "physics_angular_momentum_h3_1080p.mp4")
 shutil.copy2(src_cut / "physics_angular_momentum_h3_720p.mp4", art_dir / "physics_angular_momentum_h3_720p.mp4")
 

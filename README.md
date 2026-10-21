@@ -632,7 +632,7 @@ Demo 2 的提示詞由本智能體依據「上游工業級 MiniMax-H3 / Ref2VA �
 
 ---
 
-## 18. 任務紀錄：[2026-10-20] 蔡欣倫教授三門專屬課程（火災學、天氣與氣候學、工程數學）之 Demo 3 創意靈感企劃
+## 18. 任務紀錄：[2026-10-20] 專任教師三門大學核心課程（火災學、天氣與氣候學、工程數學）之 Demo 創意靈感企劃
 
 ### 18.1 使用者需求 (Prompt History)
 > 我有教 火災學 天氣與氣候學 工程數學 請先給我這三科目的靈感，我確認後，再請你根據 上游工業級 MiniMax-H3 / Ref2VA（多模態參考導引）規範 製作PROMPT
@@ -650,14 +650,14 @@ Demo 2 的提示詞由本智能體依據「上游工業級 MiniMax-H3 / Ref2VA �
 
 ---
 
-## 19. 任務紀錄：[2026-10-21] 蔡欣倫 教授三門大學核心課程 Demo 3、Demo 4、Demo 5 全自動製作完成
+## 19. 任務紀錄：[2026-10-21] 專任教師三門大學核心課程 Demo 3、Demo 4、Demo 5 全自動製作完成
 
 ### 19.1 使用者需求 (Prompt History)
-> 好的 這是大學的課程，將這三個方案A, B, C 分別做成 demo3, demo4, demo5 這三個方案的老師的聲音請使用 [蔡欣倫]的聲音 @[Quote] OK，GO
+> 好的 這是大學的課程，將這三個方案A, B, C 分別做成 demo3, demo4, demo5 這三個方案的老師的聲音請使用 [專任教師]的聲音 @[Quote] OK，GO
 
 ### 19.2 工業級規格與防禦機制實作
-1. **蔡欣倫 教授專屬語音克隆 (Voice Cloning, VC)**：
-   - 採用 `Tsai-voice-cloning-skill` (VoxCPM2 on CUDA `bfloat16`)，原生 48kHz 單聲道高品質音訊。
+1. **專任教師專屬語音克隆 (Voice Cloning, VC)**：
+   - 採用 `voice-cloning-skill` (VoxCPM2 on CUDA `bfloat16`)，原生 48kHz 單聲道高品質音訊。
    - 學生角色配音採用 Microsoft Edge-TTS 臺灣播音級神經網絡語音 (`zh-TW-YunJheNeural` 男聲 / `zh-TW-HsiaoChenNeural` 女聲)。
 2. **零切音閉唇安全緩衝機制 (Zero Audio Cutoff Buffer)**：
    - 時間軸精準對齊：語音於鏡頭起始 $0.20\,\mathrm{s}$ 啟動。
@@ -671,9 +671,9 @@ Demo 2 的提示詞由本智能體依據「上游工業級 MiniMax-H3 / Ref2VA �
 ### 19.3 三大示範作品成果與參數一覽
 | 作品編號 | 課程名稱與主題 | 角色陣容 | 總時長 | 1080p 檔案大小 | 銳利度保留比 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Demo 3** | 《火災學 (Fire Dynamics)》——閃燃臨界點與披薩便當的生死時速 | 蔡教授 (克隆語音) + 學生阿宏 (Edge-TTS) | 27.21s | 30.80 MB | 0.89 ~ 1.25 |
-| **Demo 4** | 《天氣與氣候學 (Weather & Climate)》——科氏力偏向與宿舍水槽的世紀大爭辯 | 蔡教授 (克隆語音) + 學生小萱 (Edge-TTS) | 27.96s | 39.60 MB | 0.92 ~ 1.53 |
-| **Demo 5** | 《工程數學 (Engineering Mathematics)》——傅立葉轉換與隔壁修路噪音的浪漫和解 | 蔡教授 (克隆語音) + 學生阿宇 (Edge-TTS) | 27.96s | 30.16 MB | 1.10 ~ 1.57 |
+| **Demo 3** | 《火災學 (Fire Dynamics)》——閃燃臨界點與披薩便當的生死時速 | 專任教師 (克隆語音) + 學生阿宏 (Edge-TTS) | 27.21s | 30.80 MB | 0.89 ~ 1.25 |
+| **Demo 4** | 《天氣與氣候學 (Weather & Climate)》——科氏力偏向與宿舍水槽的世紀大爭辯 | 專任教師 (克隆語音) + 學生小萱 (Edge-TTS) | 27.96s | 39.60 MB | 0.92 ~ 1.53 |
+| **Demo 5** | 《工程數學 (Engineering Mathematics)》——傅立葉轉換與隔壁修路噪音的浪漫和解 | 專任教師 (克隆語音) + 學生阿宇 (Edge-TTS) | 27.96s | 30.16 MB | 1.10 ~ 1.57 |
 
 ### 19.4 本地輸出目錄
 - Demo 3：`c:\20261018-demo測試-MiniMax_H3-Wan2.1\01_MiniMax-H3\demo3-fire\`
