@@ -1,0 +1,109 @@
+{
+  "title": "物理學：牛頓運動定律與校車急煞暗戀碰撞 (General Physics: Newton's Laws & The Campus Bus Crush) 旗艦版",
+  "output_name": "physics_newton_h3_1080p.mp4",
+  "engine": "h3",
+  "music_file": "campus_Instrumental.wav",
+  "profile": "fasth3_turbo_16step_pro_v2",
+  "base_seed": 20261140,
+  "sampling": {
+    "steps": 16,
+    "cfg": 4.0,
+    "sampler_name": "res_multistep",
+    "scheduler": "simple",
+    "size": [
+      1152,
+      640
+    ],
+    "crf": 12,
+    "fps": 24,
+    "max_frames": 220,
+    "qc_min_motion": 3.5,
+    "qc_max_drift": 35.0
+  },
+  "chars": {
+    "tsai": {
+      "name": "專任教師",
+      "look": "The professor, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a crisp black business casual shirt",
+      "voice_design": "A dedicated university professor voice design (Users can replace with their own cloned voice model or standard TTS neural voice).",
+      "edge_voice": "Custom-Cloned (or zh-TW-YunJheNeural fallback)"
+    },
+    "hong": {
+      "name": "阿宏",
+      "look": "Hong, a 18-year-old Taiwanese male university physics student with neat short black hair, lively round face, expressive brown eyes, wearing a clean navy-and-grey plaid button-up shirt over a white tee",
+      "voice_design": "A lively, expressive 18-year-old Taiwanese college freshman student, embarrassed, dramatic and humorous, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-YunJheNeural"
+    }
+  },
+  "h3": {
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white Newton's laws equations, sharp facial features, high shutter speed cinematography, crisp edges throughout, zero motion blur, high temporal coherence.",
+    "setting": "A spacious tiered university physics amphitheater with deep green chalkboard, wooden desks, Newton's cradle collision demonstration apparatus, and student seats",
+    "constraints": [
+      "LOCKED-OFF STATIC CAMERA on a sturdy tripod; no zoom, no pan.",
+      "High shutter speed, sharp focus throughout, zero motion blur, high temporal coherence.",
+      "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
+      "Natural bodily physics and acting without unnatural warping or ghosting."
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "同學們！校車急煞時你往前飛撲，到底是神秘外力推你，還是牛頓第一定律在作祟？",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Prof. Tsai stands firmly at the front lecture platform, pushing a mechanics dynamic cart along a smooth track until it hits a buffer stop, causing a toy figurine on top to fly forward by inertia. At 0.20 seconds, he speaks his inspiring statement with an enthusiastic smile and natural clear lip movements. Right after finishing his sentence, his lips close naturally into a confident smile and stay closed, looking out at the students. High shutter speed, crisp edges, zero motion blur."
+    },
+    {
+      "id": "S2",
+      "refs": [
+        "hong"
+      ],
+      "dur": 7.3,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "hong",
+        "text": "老師！今天早上校車一個急煞，我的慣性讓我整個人直接撲到暗戀同學的後背上，超尷尬！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "In the wooden tiered desks, Hong holds a heavy Physics textbook tightly against his chest with both hands, looking toward the professor with a comical, mortified, agonizing pleading expression. At 0.20 seconds, he speaks his question with lively comical lip movements. Right after finishing his line, his lips close naturally into a pained humorous grimace and stay closed. High shutter speed, zero motion blur."
+    },
+    {
+      "id": "S3",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 4.4,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": null,
+      "action": "On the lecture platform, Prof. Tsai pulls back one steel ball of a desktop Newton's cradle and releases it. The ball clacks sharply against the others, perfectly sending the opposite steel ball swinging out. Throughout the entire shot, he keeps his mouth completely closed in a broad, confident maestro grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
+    },
+    {
+      "id": "S4",
+      "refs": [
+        "tsai",
+        "hong"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "別尷尬！你跟她之間那是完美的作用力與反作用力！下課快用動量守恆去要 LINE 吧！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "On the lecture platform, Prof. Tsai laughs heartily, gesturing cheerfully toward Hong with an encouraging open palm. At 0.20 seconds, he speaks his witty humorous dismissal line with clear lip synchronization. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Hong laughs joyfully, giving an enthusiastic thumbs-up. High shutter speed, clear classroom atmosphere, zero ghosting."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "0": {
+    "file": "out/voice/bv/line0.wav",
+    "text": "同學們！手搖飲的冰塊融化不是悲劇，而是一階常微分方程式的精準宿命！",
+    "voice": "Custom-Cloned (專任教師音色，使用者可自由替換為自有模型)",
+    "duration": 6.84
+  },
+  "1": {
+    "file": "out/voice/bv/line1.wav",
+    "text": "老師！我的微冰珍奶放在冷氣出風口已經快退冰變常溫了，ODE 能救救我的冰塊嗎？",
+    "voice": "zh-TW-YunJheNeural",
+    "duration": 6.29
+  },
+  "2": {
+    "file": "out/voice/bv/line2.wav",
+    "text": "解出特解，你就能算出喝最後一口的最佳黃金時機！這節課就拿手搖飲當作業！",
+    "voice": "Custom-Cloned (專任教師音色，使用者可自由替換為自有模型)",
+    "duration": 6.85
+  }
+}

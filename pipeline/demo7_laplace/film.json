@@ -1,0 +1,109 @@
+{
+  "title": "工程數學：拉普拉斯轉換與避震器降維打擊 (Engineering Mathematics: Laplace Transform & The Damper Shock) 旗艦版",
+  "output_name": "engmath_laplace_h3_1080p.mp4",
+  "engine": "h3",
+  "music_file": "campus_Instrumental.wav",
+  "profile": "fasth3_turbo_16step_pro_v2",
+  "base_seed": 20261130,
+  "sampling": {
+    "steps": 16,
+    "cfg": 4.0,
+    "sampler_name": "res_multistep",
+    "scheduler": "simple",
+    "size": [
+      1152,
+      640
+    ],
+    "crf": 12,
+    "fps": 24,
+    "max_frames": 220,
+    "qc_min_motion": 3.5,
+    "qc_max_drift": 35.0
+  },
+  "chars": {
+    "tsai": {
+      "name": "專任教師",
+      "look": "The professor, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a light-grey casual blazer over a clean white collared shirt",
+      "voice_design": "A dedicated university professor voice design (Users can replace with their own cloned voice model or standard TTS neural voice).",
+      "edge_voice": "Custom-Cloned (or zh-TW-YunJheNeural fallback)"
+    },
+    "hsuan": {
+      "name": "小萱",
+      "look": "Hsuan, a 20-year-old Taiwanese female university engineering student with neat black hair tied in a neat high ponytail, thin round wire-rimmed glasses, cheerful bright eyes, wearing a pastel yellow knitted cardigan over a white blouse",
+      "voice_design": "A lively, expressive 20-year-old Taiwanese college female student, dramatic, humorous and stressed, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-HsiaoChenNeural"
+    }
+  },
+  "h3": {
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white Laplace transform equations, sharp facial features, high shutter speed cinematography, crisp edges throughout, zero motion blur, high temporal coherence.",
+    "setting": "A spacious tiered university engineering amphitheater with green chalkboard, wooden desks, mechanical damper spring demonstration apparatus, and student seats",
+    "constraints": [
+      "LOCKED-OFF STATIC CAMERA on a sturdy tripod; no zoom, no pan.",
+      "High shutter speed, sharp focus throughout, zero motion blur, high temporal coherence.",
+      "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
+      "Natural bodily physics and acting without unnatural warping or ghosting."
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "在時域裡解二階阻尼微積分算到天荒地老？拉普拉斯一出，微分變乘法，直接降維打擊！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Prof. Tsai stands firmly at the front lecture platform, holding a wooden pointer pointing toward the complex second-order differential equation on the board. At 0.20 seconds, he speaks his inspiring statement with an enthusiastic smile and natural clear lip movements. Right after finishing his sentence, his lips close naturally into a confident smile and stay closed, looking out at the students. High shutter speed, crisp edges, zero motion blur."
+    },
+    {
+      "id": "S2",
+      "refs": [
+        "hsuan"
+      ],
+      "dur": 7.3,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "hsuan",
+        "text": "老師！我算機車避震器算到阻尼發散，要是照這算式騎車，整台車早就彈上月球了！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "In the wooden tiered amphitheater desks, Hsuan holds up her notebook covered in messy equations with both hands, looking toward the professor with a comical, frantic, pleading expression. At 0.20 seconds, she speaks her question with lively comical lip movements. Right after finishing her line, her lips close naturally into a pained humorous grimace and stay closed. High shutter speed, zero motion blur."
+    },
+    {
+      "id": "S3",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 4.4,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": null,
+      "action": "On the lecture platform, Prof. Tsai lightly compresses a metal suspension spring damper model on the table and releases it, watching it smoothly decay to a stable rest. Throughout the entire shot, he keeps his mouth completely closed in a broad, confident maestro grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
+    },
+    {
+      "id": "S4",
+      "refs": [
+        "tsai",
+        "hsuan"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "丟進 s 域做純代數分解，再查表反轉換！不用算微分，這就是工程師的偷懶智慧！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "On the lecture platform, Prof. Tsai laughs heartily while drawing a bidirectional Laplace transform arrow on the board, gesturing cheerfully toward Hsuan. At 0.20 seconds, he speaks his witty humorous dismissal line with clear lip synchronization. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Hsuan chuckles in good humor, clapping her hands happily. High shutter speed, clear classroom atmosphere, zero ghosting."
+    }
+  ]
+}

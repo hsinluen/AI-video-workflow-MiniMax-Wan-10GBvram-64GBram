@@ -1,0 +1,109 @@
+{
+  "title": "工程數學：常微分方程式建模與手搖飲微冰半衰期 (Engineering Mathematics: ODE Modeling & The Milk Tea Half-Life) 旗艦版",
+  "output_name": "engmath_ode_h3_1080p.mp4",
+  "engine": "h3",
+  "music_file": "campus_Instrumental.wav",
+  "profile": "fasth3_turbo_16step_pro_v2",
+  "base_seed": 20261120,
+  "sampling": {
+    "steps": 16,
+    "cfg": 4.0,
+    "sampler_name": "res_multistep",
+    "scheduler": "simple",
+    "size": [
+      1152,
+      640
+    ],
+    "crf": 12,
+    "fps": 24,
+    "max_frames": 220,
+    "qc_min_motion": 3.5,
+    "qc_max_drift": 35.0
+  },
+  "chars": {
+    "tsai": {
+      "name": "專任教師",
+      "look": "The professor, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a dark navy-blue casual blazer over a clean light-blue collared shirt",
+      "voice_design": "A dedicated university professor voice design (Users can replace with their own cloned voice model or standard TTS neural voice).",
+      "edge_voice": "Custom-Cloned (or zh-TW-YunJheNeural fallback)"
+    },
+    "kai": {
+      "name": "小凱",
+      "look": "Kai, a 19-year-old Taiwanese male university engineering student with short black textured hair, lively youthful round face, expressive brown eyes, wearing a clean olive-green oversized college casual hoodie over a white t-shirt",
+      "voice_design": "A lively, expressive 19-year-old Taiwanese college engineering student, relatable, humorous and thirsty, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-YunJheNeural"
+    }
+  },
+  "h3": {
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white differential equations, sharp facial features, high shutter speed cinematography, crisp edges throughout, zero motion blur, high temporal coherence.",
+    "setting": "A spacious tiered university engineering amphitheater with deep green chalkboard, wooden desks, handheld infrared thermometer demonstration tool, and student seats",
+    "constraints": [
+      "LOCKED-OFF STATIC CAMERA on a sturdy tripod; no zoom, no pan.",
+      "High shutter speed, sharp focus throughout, zero motion blur, high temporal coherence.",
+      "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
+      "Natural bodily physics and acting without unnatural warping or ghosting."
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "同學們！手搖飲的冰塊融化不是悲劇，而是一階常微分方程式的精準宿命！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Prof. Tsai stands firmly at the front lecture platform, holding a piece of chalk and gesturing toward the differential equation on the board. At 0.20 seconds, he speaks his inspiring statement with an enthusiastic smile and natural clear lip movements. Right after finishing his sentence, his lips close naturally into a confident smile and stay closed, looking out at the students. High shutter speed, crisp edges, zero motion blur."
+    },
+    {
+      "id": "S2",
+      "refs": [
+        "kai"
+      ],
+      "dur": 7.3,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "kai",
+        "text": "老師！我的微冰珍奶放在冷氣出風口已經快退冰變常溫了，ODE 能救救我的冰塊嗎？",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "In the wooden tiered desks, Kai holds his sweating plastic boba milk tea cup with both hands, looking toward the professor with a comical, thirsty, agonizing pleading expression. At 0.20 seconds, he speaks his question with lively comical lip movements. Right after finishing his line, his lips close naturally into a pained humorous grimace and stay closed. High shutter speed, zero motion blur."
+    },
+    {
+      "id": "S3",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 4.4,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": null,
+      "action": "On the lecture platform, Prof. Tsai holds a professional yellow-and-black handheld infrared thermometer in his right hand, aiming it steadily at the boba cup on the lectern with a laser beam. The screen shows real-time temperature exponential decay curve. Throughout the entire shot, he keeps his mouth completely closed in a broad, confident maestro grin, lips firmly shut without any mumbling or lip movement, keeping his glasses and face sharp. High shutter speed cinematography, crisp focus, zero blur, no ghosting."
+    },
+    {
+      "id": "S4",
+      "refs": [
+        "tsai",
+        "kai"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.88,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "解出特解，你就能算出喝最後一口的最佳黃金時機！這節課就拿手搖飲當作業！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "On the lecture platform, Prof. Tsai laughs heartily while writing the ODE general solution on the board, gesturing cheerfully toward Kai. At 0.20 seconds, he speaks his witty humorous dismissal line with clear lip synchronization. Right after his speech finishes, his lips close naturally into a proud, smiling expression and stay closed. In the foreground desk nearby, Kai laughs joyfully, raising the boba cup in a toast. High shutter speed, clear classroom atmosphere, zero ghosting."
+    }
+  ]
+}

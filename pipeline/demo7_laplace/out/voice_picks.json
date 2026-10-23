@@ -1,0 +1,20 @@
+{
+  "0": {
+    "file": "out/voice/bv/line0.wav",
+    "text": "在時域裡解二階阻尼微積分算到天荒地老？拉普拉斯一出，微分變乘法，直接降維打擊！",
+    "voice": "Custom-Cloned (專任教師音色，使用者可自由替換為自有模型)",
+    "duration": 6.88
+  },
+  "1": {
+    "file": "out/voice/bv/line1.wav",
+    "text": "老師！我算機車避震器算到阻尼發散，要是照這算式騎車，整台車早就彈上月球了！",
+    "voice": "zh-TW-HsiaoChenNeural",
+    "duration": 6.31
+  },
+  "2": {
+    "file": "out/voice/bv/line2.wav",
+    "text": "丟進 s 域做純代數分解，再查表反轉換！不用算微分，這就是工程師的偷懶智慧！",
+    "voice": "Custom-Cloned (專任教師音色，使用者可自由替換為自有模型)",
+    "duration": 6.85
+  }
+}

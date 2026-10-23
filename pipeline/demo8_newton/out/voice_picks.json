@@ -1,0 +1,20 @@
+{
+  "0": {
+    "file": "out/voice/bv/line0.wav",
+    "text": "同學們！校車急煞時你往前飛撲，到底是神秘外力推你，還是牛頓第一定律在作祟？",
+    "voice": "Custom-Cloned (專任教師音色，使用者可自由替換為自有模型)",
+    "duration": 6.88
+  },
+  "1": {
+    "file": "out/voice/bv/line1.wav",
+    "text": "老師！今天早上校車一個急煞，我的慣性讓我整個人直接撲到暗戀同學的後背上，超尷尬！",
+    "voice": "zh-TW-YunJheNeural",
+    "duration": 6.27
+  },
+  "2": {
+    "file": "out/voice/bv/line2.wav",
+    "text": "別尷尬！你跟她之間那是完美的作用力與反作用力！下課快用動量守恆去要 LINE 吧！",
+    "voice": "Custom-Cloned (專任教師音色，使用者可自由替換為自有模型)",
+    "duration": 6.23
+  }
+}
