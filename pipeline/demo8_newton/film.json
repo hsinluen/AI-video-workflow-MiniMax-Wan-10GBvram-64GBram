@@ -18,7 +18,8 @@
     "fps": 24,
     "max_frames": 220,
     "qc_min_motion": 3.5,
-    "qc_max_drift": 35.0
+    "qc_max_drift": 35.0,
+    "neg_prompt": "ghosting, double exposure, transparent body, semi-transparent person, duplicate character, afterimage, double face, clone artifact, smeared background, disocclusion error, motion blur"
   },
   "chars": {
     "tsai": {
@@ -51,7 +52,7 @@
         "tsai"
       ],
       "dur": 8.0,
-      "img_strength": 0.88,
+      "img_strength": 0.82,
       "end_anchor_strength": 0.0,
       "line": {
         "who": "tsai",
@@ -59,7 +60,7 @@
         "at": 0.2,
         "after": "Right after the line the speaker's lips close naturally and stay closed."
       },
-      "action": "Prof. Tsai stands firmly at the front lecture platform, pushing a mechanics dynamic cart along a smooth track until it hits a buffer stop, causing a toy figurine on top to fly forward by inertia. At 0.20 seconds, he speaks his inspiring statement with an enthusiastic smile and natural clear lip movements. Right after finishing his sentence, his lips close naturally into a confident smile and stay closed, looking out at the students. High shutter speed, crisp edges, zero motion blur."
+      "action": "Prof. Tsai, already naturally leaning forward beside the mechanics track, smoothly pushes the dynamic cart along the track until it hits the buffer stop, causing the toy figurine on top to slide forward by inertia. At 0.20 seconds, he speaks his inspiring question with an enthusiastic smile and natural clear lip movements, looking toward the students. Right after finishing his sentence, his lips close naturally into a confident smile and stay closed. Locked-off static camera, stable body posture throughout, crisp edges, zero motion blur, zero ghosting, no double body."
     },
     {
       "id": "S2",
