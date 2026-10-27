@@ -1,0 +1,126 @@
+{
+  "title": "流體力學：白努利定律與雨傘開花昇力大作戰 (Fluid Mechanics: Bernoulli's Principle & The Umbrella Lift Adventure) 旗艦版",
+  "output_name": "fluid_bernoulli_h3_1080p.mp4",
+  "engine": "h3",
+  "music_file": "campus_Instrumental.wav",
+  "profile": "fasth3_turbo_16step_pro_v2",
+  "base_seed": 20261150,
+  "sampling": {
+    "steps": 16,
+    "cfg": 4.0,
+    "sampler_name": "res_multistep",
+    "scheduler": "simple",
+    "size": [
+      1152,
+      640
+    ],
+    "crf": 12,
+    "fps": 24,
+    "max_frames": 220,
+    "qc_min_motion": 3.5,
+    "qc_max_drift": 35.0,
+    "neg_prompt": "ghosting, double exposure, transparent body, semi-transparent person, duplicate character, afterimage, double face, clone artifact, smeared background, disocclusion error, motion blur"
+  },
+  "chars": {
+    "tsai": {
+      "name": "專任教師",
+      "look": "The professor, a 52-year-old Taiwanese male professor with neat short parted black hair with subtle silver strands, thin silver wire-rimmed rectangular glasses, warm crow's feet around intelligent friendly eyes, wearing a crisp light-blue business casual collared shirt",
+      "voice_design": "A dedicated university professor voice design (Users can replace with their own cloned voice model or standard TTS neural voice).",
+      "edge_voice": "Custom-Cloned (or zh-TW-YunJheNeural fallback)"
+    },
+    "yu": {
+      "name": "阿宇",
+      "look": "Yu, a 20-year-old Taiwanese male university engineering student with short black textured hair, dark-rimmed rectangular glasses, wearing a casual grey-and-white college hoodie over a plain tee, lively comedic relatable student expression",
+      "voice_design": "A lively, expressive 20-year-old Taiwanese college engineering student, relatable, humorous, slightly bewildered, natural Taiwanese Mandarin accent.",
+      "edge_voice": "zh-TW-YunJheNeural"
+    }
+  },
+  "h3": {
+    "style": "A realistic cinematic live-action Taiwanese university comedy movie shot on 35mm film, bright morning lecture hall lighting through tall windows, wooden tiered amphitheater seating, deep green chalkboard with white Bernoulli fluid mechanics equations and streamlines, sharp facial features, high shutter speed cinematography, crisp edges throughout, zero motion blur, high temporal coherence.",
+    "setting": "A spacious tiered university fluid mechanics amphitheater with deep green chalkboard, wooden desks, aerodynamic airfoil demonstration props, and student seats",
+    "constraints": [
+      "LOCKED-OFF STATIC CAMERA on a sturdy tripod; no zoom, no pan.",
+      "High shutter speed, sharp focus throughout, zero motion blur, high temporal coherence.",
+      "Preserve facial identity, glasses, and hair sharply from the first frame throughout the shot.",
+      "Natural bodily physics and acting without unnatural warping or ghosting."
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "同學們！颱風天狂風暴雨吹過屋頂，屋頂到底是被強風向下壓垮，還是被神秘力量向上掀翻？",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Prof. Tsai stands steadily at the lecture podium in front of the chalkboard, leaning naturally forward with both hands resting calmly on the wooden lectern. He passionately poses his counter-intuitive question to the class with an engaging smile and natural clear lip movements. Right after finishing his sentence, his lips close naturally into an inquisitive smile and stay closed, looking out at the students. Locked-off static camera, stable body posture throughout, high shutter speed cinematography, crisp edges, zero ghosting, no double body."
+    },
+    {
+      "id": "S2",
+      "refs": [
+        "yu"
+      ],
+      "dur": 7.3,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "yu",
+        "text": "老師！風力怎麼可能往上吸？你看我這把昨天被颱風吹到骨架外翻開花的破傘，它明明是被壓爛的啊！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "In the tiered classroom desks, Yu holds up a comically inverted, inside-out broken black umbrella with bent metal ribs with both hands against his chest, looking toward the professor with a comical, indignant, bewildered pleading expression. At 0.20 seconds, he speaks his passionate complaint with lively humorous lip movements. Right after finishing his line, his lips close naturally into a pained smirk and stay closed. Locked-off static camera, stable body posture, crisp focus, zero motion blur."
+    },
+    {
+      "id": "S3",
+      "refs": [
+        "tsai"
+      ],
+      "dur": 7.3,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "看仔細了！往兩張垂直白紙中間用力吹氣，它們不但沒被吹開，反而緊緊吸在一起！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Prof. Tsai is ALREADY holding two parallel white A4 paper sheets vertically in his hands in front of his chest. He leans slightly forward, blows a steady stream of air right between the two parallel sheets of paper, causing the two hanging sheets to immediately flutter inwards and stick tightly together! At 0.20 seconds, he speaks his demonstration line with an exciting smile. Right after finishing the line, his lips close naturally into a confident smile while holding the papers together. Locked-off static camera, stable posture, crisp edges, zero ghosting."
+    },
+    {
+      "id": "S4",
+      "refs": [
+        "yu"
+      ],
+      "dur": 4.5,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": null,
+      "action": "Close-up shot at eye level: In the classroom desk, Yu stares forward at the professor's paper demonstration in utter petrified disbelief. His eyes open huge, eyebrows raised high in comical shock, and his mouth is frozen slightly open in stunned silence, his hands frozen holding the broken umbrella below frame. Throughout the entire shot, he remains completely silent with zero lip mumbling, frozen in comical awe. High shutter speed cinematography, crisp focus on glasses and face, zero ghosting."
+    },
+    {
+      "id": "S5",
+      "refs": [
+        "tsai",
+        "yu"
+      ],
+      "dur": 8.0,
+      "img_strength": 0.82,
+      "end_anchor_strength": 0.0,
+      "line": {
+        "who": "tsai",
+        "text": "氣流速度越快，流體壓力越小！這就是白努利昇力！學會這條公式，下週作業算出雨傘昇力再下課！",
+        "at": 0.2,
+        "after": "Right after the line the speaker's lips close naturally and stay closed."
+      },
+      "action": "Medium two-shot in the bright classroom: On the lecture platform, Prof. Tsai holds a wooden aerodynamic airfoil wing model in his left hand, pointing at its curved upper surface while laughing warmly and speaking enthusiastically to Yu. In the front desk nearby, Yu laughs joyfully with sudden enlightenment and gives an enthusiastic thumbs-up. Right after finishing his line, Prof. Tsai's lips close naturally into a warm smile. Collegiate atmosphere, sharp facial features, crisp edges, zero ghosting."
+    }
+  ]
+}

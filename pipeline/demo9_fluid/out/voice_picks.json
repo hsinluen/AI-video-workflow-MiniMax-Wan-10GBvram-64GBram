@@ -1,0 +1,26 @@
+{
+  "0": {
+    "file": "out/voice/bv/line0.wav",
+    "text": "同學們！颱風天狂風暴雨吹過屋頂，屋頂到底是被強風向下壓垮，還是被神秘力量向上掀翻？",
+    "voice": "Custom-Cloned (專任教師音色，使用者可自由替換為自有模型)",
+    "duration": 6.84
+  },
+  "1": {
+    "file": "out/voice/bv/line1.wav",
+    "text": "老師！風力怎麼可能往上吸？你看我這把昨天被颱風吹到骨架外翻開花的破傘，它明明是被壓爛的啊！",
+    "voice": "zh-TW-YunJheNeural",
+    "duration": 6.17
+  },
+  "2": {
+    "file": "out/voice/bv/line2.wav",
+    "text": "看仔細了！往兩張垂直白紙中間用力吹氣，它們不但沒被吹開，反而緊緊吸在一起！",
+    "voice": "Custom-Cloned (專任教師音色，使用者可自由替換為自有模型)",
+    "duration": 6.31
+  },
+  "3": {
+    "file": "out/voice/bv/line3.wav",
+    "text": "氣流速度越快，流體壓力越小！這就是白努利昇力！學會這條公式，下週作業算出雨傘昇力再下課！",
+    "voice": "Custom-Cloned (專任教師音色，使用者可自由替換為自有模型)",
+    "duration": 6.76
+  }
+}
